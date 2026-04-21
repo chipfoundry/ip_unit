@@ -1,0 +1,79 @@
+# Reusable pyuvm + Icarus verification for one IP (monorepo layout:
+# repo contains CF_<NAME>/verify/pyuvm/test_runner.py).
+name: Reusable IP verify (pyuvm / Icarus)
+
+on:
+  workflow_call:
+    inputs:
+      ip_name:
+        required: true
+        type: string
+      buses:
+        description: Comma-separated bus types (must match each IP's test_runner BUSES)
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  actions: write
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    defaults:
+      run:
+        working-directory: ${{ inputs.ip_name }}/verify/pyuvm
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: ${{ inputs.ip_name }}/verify/pyuvm/requirements.txt
+
+      - name: Install Icarus Verilog
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y iverilog
+
+      - name: Install Python dependencies
+        run: |
+          pip install --upgrade pip
+          pip install cf-ipm
+          pip install -r requirements.txt
+          if [ "${{ inputs.ip_name }}" = "CF_AES" ]; then
+            pip install pycryptodome
+          fi
+
+      - name: Install IP dependencies
+        working-directory: ${{ inputs.ip_name }}
+        run: ipm install-dep || true
+
+      - name: Run verification (test_runner.py)
+        run: python test_runner.py
+        env:
+          SIM: icarus
+          BUSES: ${{ inputs.buses }}
+
+      - name: Write job summary
+        if: always()
+        run: |
+          RESULTS="sim/icarus/merged/RESULTS.md"
+          echo "## ${{ inputs.ip_name }} Verification" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          if [ -f "$RESULTS" ]; then
+            cat "$RESULTS" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "> Tests did not produce a report." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: results-${{ inputs.ip_name }}
+          path: ${{ inputs.ip_name }}/verify/pyuvm/sim/
+          if-no-files-found: warn

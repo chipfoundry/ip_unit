@@ -1,0 +1,12 @@
+# Local Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Cocotb / sim outputs (under each IP)
+**/sim/
+**/sim_build/
+
+# Editor
+.DS_Store

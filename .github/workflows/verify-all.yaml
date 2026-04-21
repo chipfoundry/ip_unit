@@ -1,0 +1,100 @@
+# Monorepo: runs cocotb/pyuvm test_runner.py for every IP (Icarus only).
+# Per-IP workflows under CF_*/.github/ are for standalone IP repositories only
+# (see .github/README.md).
+name: Verify All IPs
+
+on:
+  push:
+    branches: [main, develop]
+    paths:
+      - "CF_*/**"
+      - ".github/workflows/**"
+  pull_request:
+    branches: [main, develop]
+    paths:
+      - "CF_*/**"
+      - ".github/workflows/**"
+  workflow_dispatch:
+
+concurrency:
+  group: verify-all-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  verify:
+    strategy:
+      fail-fast: false
+      matrix:
+        ip:
+          - name: CF_AES
+            buses: "APB,AHB,WISHBONE"
+          - name: CF_GPIO8
+            buses: "APB,AHB,WISHBONE"
+          # No CF_I2C_AHBL wrapper — only APB + Wishbone
+          - name: CF_I2C
+            buses: "APB,WISHBONE"
+          - name: CF_I2S
+            buses: "APB,AHB,WISHBONE"
+          - name: CF_PSRAM_CTRL
+            buses: "AHB"
+          - name: CF_QSPI_XIP_CTRL
+            buses: "AHB"
+          - name: CF_SHA256
+            buses: "APB,AHB,WISHBONE"
+          - name: CF_SPI
+            buses: "APB,AHB,WISHBONE"
+          - name: CF_TMR32
+            buses: "APB,AHB,WISHBONE"
+          - name: CF_UART
+            buses: "APB,AHB,WISHBONE"
+          - name: CF_USB_CDC_WRAPPER
+            buses: "APB,AHB"
+          - name: CF_WDT32
+            buses: "APB,AHB,WISHBONE"
+
+    name: ${{ matrix.ip.name }}
+    uses: ./.github/workflows/reusable-verify-ip.yml
+    with:
+      ip_name: ${{ matrix.ip.name }}
+      buses: ${{ matrix.ip.buses }}
+    secrets: inherit
+
+  summary:
+    if: always()
+    needs: [verify]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: read
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: all-results
+
+      - name: Aggregate results
+        run: |
+          echo "## IP Verification Summary" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "| IP | Tests | Status |" >> "$GITHUB_STEP_SUMMARY"
+          echo "|---|---|---|" >> "$GITHUB_STEP_SUMMARY"
+
+          shopt -s nullglob
+          for dir in all-results/results-CF_*; do
+            IP=$(basename "$dir" | sed 's/results-//')
+            RESULTS="$dir/icarus/merged/results.json"
+            if [ -f "$RESULTS" ]; then
+              PASS=$(python3 -c "import json; r=json.load(open('$RESULTS')); print(sum(1 for t in r if t['passed']))")
+              TOTAL=$(python3 -c "import json; r=json.load(open('$RESULTS')); print(len(r))")
+              if [ "$PASS" = "$TOTAL" ]; then
+                echo "| $IP | $PASS/$TOTAL | :white_check_mark: |" >> "$GITHUB_STEP_SUMMARY"
+              else
+                echo "| $IP | $PASS/$TOTAL | :x: |" >> "$GITHUB_STEP_SUMMARY"
+              fi
+            else
+              echo "| $IP | N/A | :warning: |" >> "$GITHUB_STEP_SUMMARY"
+            fi
+          done
