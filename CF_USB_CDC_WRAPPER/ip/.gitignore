@@ -1,3 +1,9 @@
-*
-!dependencies.json
-!.gitignore
+# Vendored usb_cdc: only the Verilog sources required for simulation are tracked.
+# Full package (FPGA build artifacts, etc.) can be reinstalled via ipm.
+usb_cdc/*
+!usb_cdc/hdl/
+!usb_cdc/hdl/rtl/
+!usb_cdc/hdl/rtl/*.v
+!usb_cdc/LICENSE
+!usb_cdc/README.md
+!usb_cdc/usb_cdc.json

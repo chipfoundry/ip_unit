@@ -1,4 +1,4 @@
-"""Extra timing for bus register access under Verilator + Wishbone (cocotb sampling)."""
+"""Extra timing for bus register access on Wishbone (cocotb BFM + sampling)."""
 
 import os
 
@@ -15,12 +15,16 @@ def _bus_type() -> str:
     return (b or "").strip()
 
 
+def is_wishbone() -> bool:
+    return _bus_type() == "WISHBONE"
+
+
 def is_verilator_wishbone() -> bool:
-    return os.environ.get("SIM", "").lower() == "verilator" and _bus_type() == "WISHBONE"
+    return os.environ.get("SIM", "").lower() == "verilator" and is_wishbone()
 
 
 async def after_reg_write(dut, cycles: int = 2) -> None:
-    if is_verilator_wishbone() and cycles and cycles > 0:
+    if is_wishbone() and cycles and cycles > 0:
         await ClockCycles(dut.CLK, cycles)
 
 
