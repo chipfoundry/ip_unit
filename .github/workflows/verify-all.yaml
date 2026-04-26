@@ -20,9 +20,11 @@ concurrency:
   group: verify-all-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
+# Reusable IP jobs upload artifacts; must allow actions: write (GHA rejects
+# the called workflow if the caller is read-only for actions).
 permissions:
   contents: read
-  actions: read
+  actions: write
 
 jobs:
   verify:
