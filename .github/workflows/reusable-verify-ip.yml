@@ -48,9 +48,17 @@ jobs:
             pip install pycryptodome
           fi
 
+      # CF_USB_CDC_WRAPPER vendors usb_cdc under ip/; ipm would try to
+      # re-fetch the dependency and on failure (404) can wipe the tree, so
+      # skip when that IP is verified from the monorepo checkout.
       - name: Install IP dependencies
         working-directory: ${{ inputs.ip_name }}
-        run: ipm install-dep || true
+        run: |
+          if [ "${{ inputs.ip_name }}" = "CF_USB_CDC_WRAPPER" ]; then
+            echo "Skipping ipm: usb_cdc RTL is committed under ip/usb_cdc/hdl/rtl"
+          else
+            ipm install-dep || true
+          fi
 
       - name: Run verification (test_runner.py)
         run: python test_runner.py
