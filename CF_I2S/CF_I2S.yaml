@@ -1,0 +1,307 @@
+---
+info:
+  name: CF_I2S
+  description: Two-wire I2S synchronous serial interface, compatible with I2S specification.
+  repo: github.com/chipfoundry/CF_I2S
+  owner: ChipFoundry, a DBA of Umbralogic Technologies LLC
+  license: APACHE 2.0
+  author: ChipFoundry, a DBA of Umbralogic Technologies LLC
+  email: info@chipfoundry.com
+  email: ip_admin@chipfoundry.com
+  version: v1.2.0
+  date: 23-01-2025
+  category: digital
+  tags:
+    - peripheral
+    - audio
+    - serial
+  bus:
+    - generic
+  type: soft
+  status: verified
+  cell_count:
+    - IP: 2433
+    - APB: 2716
+    - AHBL: 2799
+    - WB: 2941
+  width": "0.0"
+  height": "0.0"
+  technology: n/a
+  clock_freq_mhz:
+    - IP: 116
+    - APB: 142
+    - AHBL: 135
+    - WB: 136
+  digital_supply_voltage: n/a
+  analog_supply_voltage: n/a
+  irq_reg_offset: 0xFF00
+  fifo_reg_offset: 0xFE00
+
+parameters:
+  - name: DW
+    default: 32
+    description: "FIFO data width"
+  - name: AW
+    default: 4
+    description: "FIFO Address width; Depth=2^AW"
+ports:
+  - name: fifo_en
+    width: 1
+    direction: input
+    description: FIFO enable
+  - name: fifo_rd
+    width: 1
+    direction: input
+    description: Read from FIFO signal 
+  - name: fifo_level_threshold
+    width: AW
+    direction: input
+    description: FIFO Threshold
+  - name: fifo_flush
+    width: 1
+    direction: input
+    description: FIFO Flush
+  - name: fifo_full
+    width: 1
+    direction: output
+    description: FIFO is full flag
+  - name: fifo_empty
+    width: 1
+    direction: output
+    description: FIFO is empty flag
+  - name: fifo_level
+    width: AW
+    direction: output
+    description: The current FIFO level
+  - name: fifo_level_above
+    width: 1
+    direction: output
+    description: FIFO level is above threshold flag 
+  - name: fifo_rdata
+    width: 32
+    direction: output
+    description: Data read from  FIFO
+  - name: sign_extend
+    width: 1
+    direction: input
+    description: Flag to show if input data is sign extended 
+  - name: left_justified
+    width: 1
+    direction: input
+    description: Flag to show if input data is left justified
+  - name: sample_size
+    width: 6
+    direction: input
+    description: The sample size of input data 
+  - name: sck_prescaler
+    width: 8
+    direction: input
+    description: The clock prescaler
+  - name: avg_threshold
+    width: 32
+    direction: input
+    description: The samples average threshold
+  - name: avg_flag
+    width: 1
+    direction: output
+    description: Flag raised when the samples average is above a threshold 
+  - name: avg_en
+    width: 1
+    direction: input
+    description: Enable average feature 
+  - name: avg_sel
+    width: 1
+    direction: input
+    description: 0 - 32 Samples, 1 - 64 Samples
+  - name: zcr_threshold
+    width: 32
+    direction: input
+    description: The samples ZCR threshold
+  - name: zcr_flag
+    width: 1
+    direction: output
+    description: Flag raised when the samples ZCR is above a threshold 
+  - name: zcr_en
+    width: 1
+    direction: input
+    description: Enable average feature 
+  - name: zcr_sel
+    width: 1
+    direction: input
+    description: 0 - 32 Samples, 1 - 64 Samples
+  - name: vad_flag
+    width: 1
+    direction: output
+    description: The VAD flag
+  - name: channels
+    width: 2
+    direction: input
+    description: Channels used (left, right, or stereo)
+  - name: en
+    width: 1
+    direction: input
+    description: Enable signal
+
+external_interface:
+  - name: ws
+    port: ws
+    direction: output
+    description: Word Select; this signal indicates the boundary between left and right audio channels
+    width: 1
+  - name: sck
+    port: sck
+    direction: output
+    width: 1
+    description: Serial Clock; this provides the timing for data transfer, synchronizing the transmission of bits.
+  - name: sdi
+    port: sdi
+    direction: input
+    sync: True
+    width: 1
+    description: Serial Data Input; this line carries the audio data being sent to the device.
+
+clock:
+  name: clk
+  gated: 'yes'
+
+reset:
+  name: rst_n
+  level: 0
+
+registers:
+  - name: RXDATA
+    size: 32
+    mode: r
+    fifo: yes
+    offset: 0
+    bit_access: no
+    read_port: fifo_rdata
+    description: The received sample
+  - name: PR
+    size: 8
+    mode: w
+    fifo: no
+    offset: 4
+    bit_access: no
+    write_port: sck_prescaler
+    description: The Prescaler register; used to determine the sck signal frequency . $Prescaler = clk_freq/(2 x sck_freq) - 1$.
+  - name: AVGT
+    size: 32
+    mode: w
+    fifo: no
+    offset: 8
+    bit_access: no
+    write_port: avg_threshold
+    description: The Average threshold
+  - name: ZCRT
+    size: 32
+    mode: w
+    fifo: no
+    offset: 12
+    bit_access: no
+    write_port: zcr_threshold
+    description: The ZCR threshold
+  - name: CTRL
+    size: 4
+    mode: w
+    fifo: no
+    offset: 16
+    bit_access: no
+    init: "'h0"
+    description: "Control Register; 0:Enable, 1:FIFO Enable."
+    fields:
+      - name: en
+        bit_offset: 0
+        bit_width: 1
+        write_port: en
+        description: "Enable"
+      - name: fifo_en
+        bit_offset: 1
+        bit_width: 1
+        write_port: fifo_en
+        description: "Fifo Enable"
+      - name: avg_en
+        bit_offset: 2
+        bit_width: 1
+        write_port: avg_en
+        description: "Averaging enable"
+      - name: zcr_en
+        bit_offset: 3
+        bit_width: 1
+        write_port: zcr_en
+        description: "ZCR enable"
+  - name: CFG
+    size: 12
+    mode: w
+    fifo: no
+    offset: 20
+    bit_access: no
+    init: "'h201"
+    description: "Configuration Register, 0-1: Channels to read, '01': right, '10': left, '11': Both (stereo) 2: Sign Extend 3: Left Justify 4-8: Sample Size (0-31)"
+    fields:
+      - name: channels
+        bit_offset: 0
+        bit_width: 2
+        write_port: channels
+        description: "Channels to read, '01': right, '10': left, '11': Both (stereo)"
+      - name: sign_extend
+        bit_offset: 2
+        bit_width: 1
+        write_port: sign_extend
+        description: "Sign Extend"
+      - name: left_justified
+        bit_offset: 3
+        bit_width: 1
+        write_port: left_justified
+        description: "Left justified flag"
+      - name: sample_size
+        bit_offset: 4
+        bit_width: 6
+        write_port: sample_size
+        description: "Sample size"
+      - name: AVGSEL
+        bit_offset: 10
+        bit_width: 1
+        write_port: avg_sel
+        description: "Select the number of samples to average"
+      - name: ZCRSEL
+        bit_offset: 11
+        bit_width: 1
+        write_port: zcr_sel
+        description: "Select the number of samples to calculate the ZCR"
+
+
+flags:
+  - name: FIFOE
+    port: fifo_empty
+    description: Receive FIFO is Empty
+  - name: FIFOA
+    port: fifo_level_above
+    description: FIFO level is above the set level threshold
+  - name: FIFOF
+    port: fifo_full
+    description: Receive FIFO is Full.
+  - name: AVGF
+    port: avg_flag
+    description: The avg is above the threshold.
+  - name: ZCRF
+    port: zcr_flag
+    description: The ZCR is above the threshold.
+  - name: VADF
+    port: vad_flag
+    description: The Voice Activity Detector flag; active when both ZCR & AVG flags are active.
+
+
+
+fifos:
+  - name: RX_FIFO
+    type: read  
+    width: DW
+    address_width: AW 
+    register: RXDATA
+    data_port: fifo_rdata
+    control_port: fifo_rd
+    flush_enable: True
+    flush_port: fifo_flush
+    threshold_port: fifo_level_threshold
+    level_port: fifo_level

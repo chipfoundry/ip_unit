@@ -1,0 +1,72 @@
+---
+info:
+  name: CF_QSPI_XIP_CTRL
+  description: A QSPI XiP Flash COntroller with a parameterized Direct-Mapped Cache.
+  repo: github.com/chipfoundry/CF_QSPI_XIP_CTRL
+  owner: Efabless Corp.
+  license: APACHE 2.0
+  author: Efabless Corp.
+  email: ip_admin@efabless.com
+  version: v1.1.0
+  date: 2025-01-23
+  category: digital
+  tags:
+    - QSPI
+    - FLASH
+    - XIP
+    - Cache
+  bus:
+    - AHBL
+  type": soft
+  status: verified
+  cell_count:
+    - IP: 1973
+    - AHBL: 1973
+  width": "0.0"
+  height": "0.0"
+  technology: n/a
+  clock_freq_mhz:
+    - IP: 250
+    - AHBL: 250
+  digital_supply_voltage: n/a
+  analog_supply_voltage: n/a
+
+parameters:
+  - name: NUM_LINES
+    default: 16
+    description: The cache number of lines.
+  - name: LINE_SIZE
+    default: 32
+    description: The cache line size in bytes.
+  - name: RESET_CYCLES
+    default: 999
+    description: The number of cycles needed for the s/w reset command; reset time = (RESET_CYCLES + 1) * 2 /(HCLK frequency). 
+
+clock:
+  name: clk
+  gated: 'no'
+
+external_interface:
+  - name: sck
+    direction: output
+    description: SPI serial clock
+    width: 1
+  - name: ce_n
+    direction: output
+    width: 1
+    description: SPI chip select (Active Low).
+  - name: dout
+    direction: output
+    width: 4
+    description: Flash controller SPI data out.
+  - name: din
+    direction: input
+    width: 4
+    description: Flash controller SPI data in.
+  - name: douten
+    direction: output
+    width: 4
+    description: Flash controller data out enable (Active Low)
+    
+registers: []
+    

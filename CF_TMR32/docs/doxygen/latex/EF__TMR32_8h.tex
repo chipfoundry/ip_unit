@@ -1,0 +1,627 @@
+\doxysection{EF\+\_\+\+TMR32.\+h File Reference}
+\hypertarget{CF__TMR32_8h}{}\label{CF__TMR32_8h}\index{EF\_TMR32.h@{EF\_TMR32.h}}
+{\ttfamily \#include $<$EF\+\_\+\+TMR32\+\_\+regs.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1}{actions}} \{ \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1ac157bdf0b85a40d2619cbc8bc1ae5fe2}{NONE}} = 0b00
+, \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1a6a226f4143ca3b18999551694cdb72a8}{LOW}} = 0b01
+, \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1a0c3a1dacf94061154b3ee354359c5893}{HIGH}} = 0b10
+, \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1ab5f95af56a0f14f0032750594b523c95}{INVERT}} = 0b11
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{CF__TMR32_8h_a0b98a7924dfc60cc5ce81fac86757d88}{EF\+\_\+\+TMR32\+\_\+enable}} (uint32\+\_\+t tmr32\+\_\+base)
+\begin{DoxyCompactList}\small\item\em enables timer by setting "{}\+TE"{} bit in the CTRL register to 1 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{CF__TMR32_8h_a6f724f1aced4bcfe4b8107c9b6fa6d8a}{EF\+\_\+\+TMR32\+\_\+restart}} (uint32\+\_\+t tmr32\+\_\+base)
+\begin{DoxyCompactList}\small\item\em enables timer re-\/start; used in the one-\/shot mode to restart the timer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{CF__TMR32_8h_a09cfca084bb5360d3cf214b2bffc9b2e}{EF\+\_\+\+TMR32\+\_\+\+PWM0\+Enable}} (uint32\+\_\+t tmr32\+\_\+base)
+\begin{DoxyCompactList}\small\item\em enables PWM0 by setting "{}\+P0\+E"{} bit in the CTRL register to 1 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{CF__TMR32_8h_a135d5af1253e1f9f69b08d4e41dd02ea}{EF\+\_\+\+TMR32\+\_\+\+PWM1\+Enable}} (uint32\+\_\+t tmr32\+\_\+base)
+\begin{DoxyCompactList}\small\item\em enables PWM1 by setting "{}\+P1\+E"{} bit in the CTRL register to 1 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{CF__TMR32_8h_a921c61fb121520bc93344f81ad97a0d7}{EF\+\_\+\+TMR32\+\_\+deadtime\+Enable}} (uint32\+\_\+t tmr32\+\_\+base)
+\begin{DoxyCompactList}\small\item\em enables deadtime by setting "{}\+DTE"{} bit in the CTRL register to 1 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{CF__TMR32_8h_a88b4da2266667bc4842db996d5b0b62e}{EF\+\_\+\+TMR32\+\_\+\+PWM0\+Invert}} (uint32\+\_\+t tmr32\+\_\+base)
+\begin{DoxyCompactList}\small\item\em invert PWM0 by setting "{}\+P0\+I"{} bit in the CTRL register to 1 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{CF__TMR32_8h_ae13e58eda13d7f51a8326241c6f2b3e1}{EF\+\_\+\+TMR32\+\_\+\+PWM1\+Invert}} (uint32\+\_\+t tmr32\+\_\+base)
+\begin{DoxyCompactList}\small\item\em invert PWM1 by setting "{}\+P1\+I"{} bit in the CTRL register to 1 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{CF__TMR32_8h_a20f666530bb16f3862ab0a830fd3fe5e}{EF\+\_\+\+TMR32\+\_\+set\+Up\+Count}} (uint32\+\_\+t tmr32\+\_\+base)
+\begin{DoxyCompactList}\small\item\em set the timer direction to be up counting \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{CF__TMR32_8h_af83cff23e161747858588bb6f87cdfb4}{EF\+\_\+\+TMR32\+\_\+set\+Down\+Count}} (uint32\+\_\+t tmr32\+\_\+base)
+\begin{DoxyCompactList}\small\item\em set the timer direction to be down counting \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{CF__TMR32_8h_a829b564412b2c84a8c66af4147943f29}{EF\+\_\+\+TMR32\+\_\+set\+Up\+Down\+Count}} (uint32\+\_\+t tmr32\+\_\+base)
+\begin{DoxyCompactList}\small\item\em set the timer direction to be up/down counting \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{CF__TMR32_8h_aeefe8fecbe7223302c773973b21975c1}{EF\+\_\+\+TMR32\+\_\+set\+Periodic}} (uint32\+\_\+t tmr32\+\_\+base)
+\begin{DoxyCompactList}\small\item\em set the timer to be periodic \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{CF__TMR32_8h_a82340cdad934dca7031edc00c9a2d8df}{EF\+\_\+\+TMR32\+\_\+set\+One\+Shot}} (uint32\+\_\+t tmr32\+\_\+base)
+\begin{DoxyCompactList}\small\item\em set the timer to be one shot \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{CF__TMR32_8h_a415cfe3592f54f68e3e8a8eaf116a693}{EF\+\_\+\+TMR32\+\_\+set\+PWM0\+Matching\+Zero\+Action}} (uint32\+\_\+t tmr32\+\_\+base, enum \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1}{actions}} action)
+\begin{DoxyCompactList}\small\item\em set the action of PWM0 when the timer matches Zero value \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{CF__TMR32_8h_a7542ec9a8e57ac54e00cadee6d0ba62b}{EF\+\_\+\+TMR32\+\_\+set\+PWM0\+Matching\+CMPXAction}} (uint32\+\_\+t tmr32\+\_\+base, enum \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1}{actions}} action)
+\begin{DoxyCompactList}\small\item\em set the action of PWM0 when the timer matches CMPX value while up counting \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{CF__TMR32_8h_aa708e75f62acfe3cca5de0201f58be84}{EF\+\_\+\+TMR32\+\_\+set\+PWM0\+Matching\+CMPYAction}} (uint32\+\_\+t tmr32\+\_\+base, enum \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1}{actions}} action)
+\begin{DoxyCompactList}\small\item\em set the action of PWM0 when the timer matches CMPY value while up counting \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{CF__TMR32_8h_a7711ca87edfd77457ad7d5246cd01978}{EF\+\_\+\+TMR32\+\_\+set\+PWM0\+Matching\+RELOADAction}} (uint32\+\_\+t tmr32\+\_\+base, enum \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1}{actions}} action)
+\begin{DoxyCompactList}\small\item\em set the action of PWM0 when the timer matches Reload value \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{CF__TMR32_8h_ac58bc6263f39d70a88d217956e50fefb}{EF\+\_\+\+TMR32\+\_\+set\+PWM0\+Matching\+CMPYDown\+Count\+Action}} (uint32\+\_\+t tmr32\+\_\+base, enum \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1}{actions}} action)
+\begin{DoxyCompactList}\small\item\em set the action of PWM0 when the timer matches CMPX value while down counting \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{CF__TMR32_8h_a66734223ea92dfeae86c7eac582e013e}{EF\+\_\+\+TMR32\+\_\+set\+PWM0\+Matching\+CMPXDown\+Count\+Action}} (uint32\+\_\+t tmr32\+\_\+base, enum \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1}{actions}} action)
+\begin{DoxyCompactList}\small\item\em set the action of PWM0 when the timer matches CMPY value while down counting \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{CF__TMR32_8h_aa9af6b2ce5b6e8828408c845345b0d44}{EF\+\_\+\+TMR32\+\_\+set\+PWM1\+Matching\+Zero\+Action}} (uint32\+\_\+t tmr32\+\_\+base, enum \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1}{actions}} action)
+\begin{DoxyCompactList}\small\item\em set the action of PWM1 when the timer matches Zero value \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{CF__TMR32_8h_a96664e404ae630c57804cd9a3776f8cb}{EF\+\_\+\+TMR32\+\_\+set\+PWM1\+Matching\+CMPXAction}} (uint32\+\_\+t tmr32\+\_\+base, enum \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1}{actions}} action)
+\begin{DoxyCompactList}\small\item\em set the action of PWM1 when the timer matches CMPX value while up counting \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{CF__TMR32_8h_aa9393a186a487ca696ac55f78e54ae10}{EF\+\_\+\+TMR32\+\_\+set\+PWM1\+Matching\+RELOADAction}} (uint32\+\_\+t tmr32\+\_\+base, enum \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1}{actions}} action)
+\begin{DoxyCompactList}\small\item\em set the action of PWM1 when the timer matches Reload value \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{CF__TMR32_8h_a3db62bb1a46497d90950a630bdcd3d9a}{EF\+\_\+\+TMR32\+\_\+set\+PWM1\+Matching\+CMPYDown\+Count\+Action}} (uint32\+\_\+t tmr32\+\_\+base, enum \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1}{actions}} action)
+\begin{DoxyCompactList}\small\item\em set the action of PWM1 when the timer matches CMPX value while down counting \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{CF__TMR32_8h_a3e2ca846ea20ff2262b8617f03b41e32}{EF\+\_\+\+TMR32\+\_\+set\+PWM1\+Matching\+CMPXDown\+Count\+Action}} (uint32\+\_\+t tmr32\+\_\+base, enum \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1}{actions}} action)
+\begin{DoxyCompactList}\small\item\em set the action of PWM1 when the timer matches CMPY value while down counting \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{CF__TMR32_8h_a2b6b972507a6ad0aa364a4024f2cbdfb}{EF\+\_\+\+TMR32\+\_\+set\+RELOAD}} (uint32\+\_\+t tmr32\+\_\+base, int value)
+\begin{DoxyCompactList}\small\item\em set the timer reload value \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{CF__TMR32_8h_a3b643a20832d82a45cf46b18e4100bb5}{EF\+\_\+\+TMR32\+\_\+get\+RELOAD}} (uint32\+\_\+t tmr32\+\_\+base)
+\begin{DoxyCompactList}\small\item\em get the timer reload value \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{CF__TMR32_8h_a85d393473b33bd74a65798519b322b95}{EF\+\_\+\+TMR32\+\_\+set\+CMPX}} (uint32\+\_\+t tmr32\+\_\+base, int value)
+\begin{DoxyCompactList}\small\item\em set the CMPX register value \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{CF__TMR32_8h_a7db9f7a285db0b879dfaef4d98cfbdca}{EF\+\_\+\+TMR32\+\_\+get\+CMPX}} (uint32\+\_\+t tmr32\+\_\+base)
+\begin{DoxyCompactList}\small\item\em get the CMPX register value \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{CF__TMR32_8h_a1fe62917e80107ffc55ac64d071f161f}{EF\+\_\+\+TMR32\+\_\+set\+CMPY}} (uint32\+\_\+t tmr32\+\_\+base, int value)
+\begin{DoxyCompactList}\small\item\em set the CMPY register value \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{CF__TMR32_8h_a50616b48ff6f7a191c163badcfbddf54}{EF\+\_\+\+TMR32\+\_\+get\+CMPY}} (uint32\+\_\+t tmr32\+\_\+base)
+\begin{DoxyCompactList}\small\item\em get the CMPY register value \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{CF__TMR32_8h_a692bbc4af5c80220a3935ec4b1268676}{EF\+\_\+\+TMR32\+\_\+get\+TMR}} (uint32\+\_\+t tmr32\+\_\+base)
+\begin{DoxyCompactList}\small\item\em get the current value of the timer \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{CF__TMR32_8h_a5e18c1c7fb1332277c7fea24cae7dd91}{EF\+\_\+\+TMR32\+\_\+set\+Deadtime}} (uint32\+\_\+t tmr32\+\_\+base, int value)
+\begin{DoxyCompactList}\small\item\em set the timer deadtime register value \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1}\label{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1} 
+\index{EF\_TMR32.h@{EF\_TMR32.h}!actions@{actions}}
+\index{actions@{actions}!EF\_TMR32.h@{EF\_TMR32.h}}
+\doxysubsubsection{\texorpdfstring{actions}{actions}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1}{actions}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NONE@{NONE}!EF\_TMR32.h@{EF\_TMR32.h}}\index{EF\_TMR32.h@{EF\_TMR32.h}!NONE@{NONE}}}\Hypertarget{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1ac157bdf0b85a40d2619cbc8bc1ae5fe2}\label{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1ac157bdf0b85a40d2619cbc8bc1ae5fe2} 
+NONE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOW@{LOW}!EF\_TMR32.h@{EF\_TMR32.h}}\index{EF\_TMR32.h@{EF\_TMR32.h}!LOW@{LOW}}}\Hypertarget{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1a6a226f4143ca3b18999551694cdb72a8}\label{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1a6a226f4143ca3b18999551694cdb72a8} 
+LOW&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIGH@{HIGH}!EF\_TMR32.h@{EF\_TMR32.h}}\index{EF\_TMR32.h@{EF\_TMR32.h}!HIGH@{HIGH}}}\Hypertarget{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1a0c3a1dacf94061154b3ee354359c5893}\label{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1a0c3a1dacf94061154b3ee354359c5893} 
+HIGH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INVERT@{INVERT}!EF\_TMR32.h@{EF\_TMR32.h}}\index{EF\_TMR32.h@{EF\_TMR32.h}!INVERT@{INVERT}}}\Hypertarget{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1ab5f95af56a0f14f0032750594b523c95}\label{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1ab5f95af56a0f14f0032750594b523c95} 
+INVERT&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{CF__TMR32_8h_a921c61fb121520bc93344f81ad97a0d7}\label{CF__TMR32_8h_a921c61fb121520bc93344f81ad97a0d7} 
+\index{EF\_TMR32.h@{EF\_TMR32.h}!EF\_TMR32\_deadtimeEnable@{EF\_TMR32\_deadtimeEnable}}
+\index{EF\_TMR32\_deadtimeEnable@{EF\_TMR32\_deadtimeEnable}!EF\_TMR32.h@{EF\_TMR32.h}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_deadtimeEnable()}{EF\_TMR32\_deadtimeEnable()}}
+{\footnotesize\ttfamily void EF\+\_\+\+TMR32\+\_\+deadtime\+Enable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{tmr32\+\_\+base }\end{DoxyParamCaption})}
+
+
+
+enables deadtime by setting "{}\+DTE"{} bit in the CTRL register to 1 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmr32\+\_\+base} & The base memory address of TMR32 registers. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{CF__TMR32_8h_a0b98a7924dfc60cc5ce81fac86757d88}\label{CF__TMR32_8h_a0b98a7924dfc60cc5ce81fac86757d88} 
+\index{EF\_TMR32.h@{EF\_TMR32.h}!EF\_TMR32\_enable@{EF\_TMR32\_enable}}
+\index{EF\_TMR32\_enable@{EF\_TMR32\_enable}!EF\_TMR32.h@{EF\_TMR32.h}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_enable()}{EF\_TMR32\_enable()}}
+{\footnotesize\ttfamily void EF\+\_\+\+TMR32\+\_\+enable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{tmr32\+\_\+base }\end{DoxyParamCaption})}
+
+
+
+enables timer by setting "{}\+TE"{} bit in the CTRL register to 1 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmr32\+\_\+base} & The base memory address of TMR32 registers. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{CF__TMR32_8h_a7db9f7a285db0b879dfaef4d98cfbdca}\label{CF__TMR32_8h_a7db9f7a285db0b879dfaef4d98cfbdca} 
+\index{EF\_TMR32.h@{EF\_TMR32.h}!EF\_TMR32\_getCMPX@{EF\_TMR32\_getCMPX}}
+\index{EF\_TMR32\_getCMPX@{EF\_TMR32\_getCMPX}!EF\_TMR32.h@{EF\_TMR32.h}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_getCMPX()}{EF\_TMR32\_getCMPX()}}
+{\footnotesize\ttfamily int EF\+\_\+\+TMR32\+\_\+get\+CMPX (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{tmr32\+\_\+base }\end{DoxyParamCaption})}
+
+
+
+get the CMPX register value 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmr32\+\_\+base} & The base memory address of TMR32 registers. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+CMPX register value 
+\end{DoxyReturn}
+\Hypertarget{CF__TMR32_8h_a50616b48ff6f7a191c163badcfbddf54}\label{CF__TMR32_8h_a50616b48ff6f7a191c163badcfbddf54} 
+\index{EF\_TMR32.h@{EF\_TMR32.h}!EF\_TMR32\_getCMPY@{EF\_TMR32\_getCMPY}}
+\index{EF\_TMR32\_getCMPY@{EF\_TMR32\_getCMPY}!EF\_TMR32.h@{EF\_TMR32.h}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_getCMPY()}{EF\_TMR32\_getCMPY()}}
+{\footnotesize\ttfamily int EF\+\_\+\+TMR32\+\_\+get\+CMPY (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{tmr32\+\_\+base }\end{DoxyParamCaption})}
+
+
+
+get the CMPY register value 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmr32\+\_\+base} & The base memory address of TMR32 registers. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+CMPY register value 
+\end{DoxyReturn}
+\Hypertarget{CF__TMR32_8h_a3b643a20832d82a45cf46b18e4100bb5}\label{CF__TMR32_8h_a3b643a20832d82a45cf46b18e4100bb5} 
+\index{EF\_TMR32.h@{EF\_TMR32.h}!EF\_TMR32\_getRELOAD@{EF\_TMR32\_getRELOAD}}
+\index{EF\_TMR32\_getRELOAD@{EF\_TMR32\_getRELOAD}!EF\_TMR32.h@{EF\_TMR32.h}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_getRELOAD()}{EF\_TMR32\_getRELOAD()}}
+{\footnotesize\ttfamily int EF\+\_\+\+TMR32\+\_\+get\+RELOAD (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{tmr32\+\_\+base }\end{DoxyParamCaption})}
+
+
+
+get the timer reload value 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmr32\+\_\+base} & The base memory address of TMR32 registers. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reload register value 
+\end{DoxyReturn}
+\Hypertarget{CF__TMR32_8h_a692bbc4af5c80220a3935ec4b1268676}\label{CF__TMR32_8h_a692bbc4af5c80220a3935ec4b1268676} 
+\index{EF\_TMR32.h@{EF\_TMR32.h}!EF\_TMR32\_getTMR@{EF\_TMR32\_getTMR}}
+\index{EF\_TMR32\_getTMR@{EF\_TMR32\_getTMR}!EF\_TMR32.h@{EF\_TMR32.h}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_getTMR()}{EF\_TMR32\_getTMR()}}
+{\footnotesize\ttfamily int EF\+\_\+\+TMR32\+\_\+get\+TMR (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{tmr32\+\_\+base }\end{DoxyParamCaption})}
+
+
+
+get the current value of the timer 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmr32\+\_\+base} & The base memory address of TMR32 registers. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+current timer value 
+\end{DoxyReturn}
+\Hypertarget{CF__TMR32_8h_a09cfca084bb5360d3cf214b2bffc9b2e}\label{CF__TMR32_8h_a09cfca084bb5360d3cf214b2bffc9b2e} 
+\index{EF\_TMR32.h@{EF\_TMR32.h}!EF\_TMR32\_PWM0Enable@{EF\_TMR32\_PWM0Enable}}
+\index{EF\_TMR32\_PWM0Enable@{EF\_TMR32\_PWM0Enable}!EF\_TMR32.h@{EF\_TMR32.h}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_PWM0Enable()}{EF\_TMR32\_PWM0Enable()}}
+{\footnotesize\ttfamily void EF\+\_\+\+TMR32\+\_\+\+PWM0\+Enable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{tmr32\+\_\+base }\end{DoxyParamCaption})}
+
+
+
+enables PWM0 by setting "{}\+P0\+E"{} bit in the CTRL register to 1 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmr32\+\_\+base} & The base memory address of TMR32 registers. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{CF__TMR32_8h_a88b4da2266667bc4842db996d5b0b62e}\label{CF__TMR32_8h_a88b4da2266667bc4842db996d5b0b62e} 
+\index{EF\_TMR32.h@{EF\_TMR32.h}!EF\_TMR32\_PWM0Invert@{EF\_TMR32\_PWM0Invert}}
+\index{EF\_TMR32\_PWM0Invert@{EF\_TMR32\_PWM0Invert}!EF\_TMR32.h@{EF\_TMR32.h}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_PWM0Invert()}{EF\_TMR32\_PWM0Invert()}}
+{\footnotesize\ttfamily void EF\+\_\+\+TMR32\+\_\+\+PWM0\+Invert (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{tmr32\+\_\+base }\end{DoxyParamCaption})}
+
+
+
+invert PWM0 by setting "{}\+P0\+I"{} bit in the CTRL register to 1 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmr32\+\_\+base} & The base memory address of TMR32 registers. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{CF__TMR32_8h_a135d5af1253e1f9f69b08d4e41dd02ea}\label{CF__TMR32_8h_a135d5af1253e1f9f69b08d4e41dd02ea} 
+\index{EF\_TMR32.h@{EF\_TMR32.h}!EF\_TMR32\_PWM1Enable@{EF\_TMR32\_PWM1Enable}}
+\index{EF\_TMR32\_PWM1Enable@{EF\_TMR32\_PWM1Enable}!EF\_TMR32.h@{EF\_TMR32.h}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_PWM1Enable()}{EF\_TMR32\_PWM1Enable()}}
+{\footnotesize\ttfamily void EF\+\_\+\+TMR32\+\_\+\+PWM1\+Enable (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{tmr32\+\_\+base }\end{DoxyParamCaption})}
+
+
+
+enables PWM1 by setting "{}\+P1\+E"{} bit in the CTRL register to 1 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmr32\+\_\+base} & The base memory address of TMR32 registers. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{CF__TMR32_8h_ae13e58eda13d7f51a8326241c6f2b3e1}\label{CF__TMR32_8h_ae13e58eda13d7f51a8326241c6f2b3e1} 
+\index{EF\_TMR32.h@{EF\_TMR32.h}!EF\_TMR32\_PWM1Invert@{EF\_TMR32\_PWM1Invert}}
+\index{EF\_TMR32\_PWM1Invert@{EF\_TMR32\_PWM1Invert}!EF\_TMR32.h@{EF\_TMR32.h}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_PWM1Invert()}{EF\_TMR32\_PWM1Invert()}}
+{\footnotesize\ttfamily void EF\+\_\+\+TMR32\+\_\+\+PWM1\+Invert (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{tmr32\+\_\+base }\end{DoxyParamCaption})}
+
+
+
+invert PWM1 by setting "{}\+P1\+I"{} bit in the CTRL register to 1 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmr32\+\_\+base} & The base memory address of TMR32 registers. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{CF__TMR32_8h_a6f724f1aced4bcfe4b8107c9b6fa6d8a}\label{CF__TMR32_8h_a6f724f1aced4bcfe4b8107c9b6fa6d8a} 
+\index{EF\_TMR32.h@{EF\_TMR32.h}!EF\_TMR32\_restart@{EF\_TMR32\_restart}}
+\index{EF\_TMR32\_restart@{EF\_TMR32\_restart}!EF\_TMR32.h@{EF\_TMR32.h}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_restart()}{EF\_TMR32\_restart()}}
+{\footnotesize\ttfamily void EF\+\_\+\+TMR32\+\_\+restart (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{tmr32\+\_\+base }\end{DoxyParamCaption})}
+
+
+
+enables timer re-\/start; used in the one-\/shot mode to restart the timer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmr32\+\_\+base} & The base memory address of TMR32 registers. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{CF__TMR32_8h_a85d393473b33bd74a65798519b322b95}\label{CF__TMR32_8h_a85d393473b33bd74a65798519b322b95} 
+\index{EF\_TMR32.h@{EF\_TMR32.h}!EF\_TMR32\_setCMPX@{EF\_TMR32\_setCMPX}}
+\index{EF\_TMR32\_setCMPX@{EF\_TMR32\_setCMPX}!EF\_TMR32.h@{EF\_TMR32.h}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setCMPX()}{EF\_TMR32\_setCMPX()}}
+{\footnotesize\ttfamily void EF\+\_\+\+TMR32\+\_\+set\+CMPX (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{tmr32\+\_\+base,  }\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+set the CMPX register value 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmr32\+\_\+base} & The base memory address of TMR32 registers. \\
+\hline
+{\em value} & CMPX value \\
+\hline
+\end{DoxyParams}
+\Hypertarget{CF__TMR32_8h_a1fe62917e80107ffc55ac64d071f161f}\label{CF__TMR32_8h_a1fe62917e80107ffc55ac64d071f161f} 
+\index{EF\_TMR32.h@{EF\_TMR32.h}!EF\_TMR32\_setCMPY@{EF\_TMR32\_setCMPY}}
+\index{EF\_TMR32\_setCMPY@{EF\_TMR32\_setCMPY}!EF\_TMR32.h@{EF\_TMR32.h}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setCMPY()}{EF\_TMR32\_setCMPY()}}
+{\footnotesize\ttfamily void EF\+\_\+\+TMR32\+\_\+set\+CMPY (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{tmr32\+\_\+base,  }\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+set the CMPY register value 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmr32\+\_\+base} & The base memory address of TMR32 registers. \\
+\hline
+{\em value} & CMPY value \\
+\hline
+\end{DoxyParams}
+\Hypertarget{CF__TMR32_8h_a5e18c1c7fb1332277c7fea24cae7dd91}\label{CF__TMR32_8h_a5e18c1c7fb1332277c7fea24cae7dd91} 
+\index{EF\_TMR32.h@{EF\_TMR32.h}!EF\_TMR32\_setDeadtime@{EF\_TMR32\_setDeadtime}}
+\index{EF\_TMR32\_setDeadtime@{EF\_TMR32\_setDeadtime}!EF\_TMR32.h@{EF\_TMR32.h}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setDeadtime()}{EF\_TMR32\_setDeadtime()}}
+{\footnotesize\ttfamily void EF\+\_\+\+TMR32\+\_\+set\+Deadtime (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{tmr32\+\_\+base,  }\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+set the timer deadtime register value 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmr32\+\_\+base} & The base memory address of TMR32 registers. \\
+\hline
+{\em value} & deadtime register value \\
+\hline
+\end{DoxyParams}
+\Hypertarget{CF__TMR32_8h_af83cff23e161747858588bb6f87cdfb4}\label{CF__TMR32_8h_af83cff23e161747858588bb6f87cdfb4} 
+\index{EF\_TMR32.h@{EF\_TMR32.h}!EF\_TMR32\_setDownCount@{EF\_TMR32\_setDownCount}}
+\index{EF\_TMR32\_setDownCount@{EF\_TMR32\_setDownCount}!EF\_TMR32.h@{EF\_TMR32.h}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setDownCount()}{EF\_TMR32\_setDownCount()}}
+{\footnotesize\ttfamily void EF\+\_\+\+TMR32\+\_\+set\+Down\+Count (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{tmr32\+\_\+base }\end{DoxyParamCaption})}
+
+
+
+set the timer direction to be down counting 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmr32\+\_\+base} & The base memory address of TMR32 registers. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{CF__TMR32_8h_a82340cdad934dca7031edc00c9a2d8df}\label{CF__TMR32_8h_a82340cdad934dca7031edc00c9a2d8df} 
+\index{EF\_TMR32.h@{EF\_TMR32.h}!EF\_TMR32\_setOneShot@{EF\_TMR32\_setOneShot}}
+\index{EF\_TMR32\_setOneShot@{EF\_TMR32\_setOneShot}!EF\_TMR32.h@{EF\_TMR32.h}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setOneShot()}{EF\_TMR32\_setOneShot()}}
+{\footnotesize\ttfamily void EF\+\_\+\+TMR32\+\_\+set\+One\+Shot (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{tmr32\+\_\+base }\end{DoxyParamCaption})}
+
+
+
+set the timer to be one shot 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmr32\+\_\+base} & The base memory address of TMR32 registers. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{CF__TMR32_8h_aeefe8fecbe7223302c773973b21975c1}\label{CF__TMR32_8h_aeefe8fecbe7223302c773973b21975c1} 
+\index{EF\_TMR32.h@{EF\_TMR32.h}!EF\_TMR32\_setPeriodic@{EF\_TMR32\_setPeriodic}}
+\index{EF\_TMR32\_setPeriodic@{EF\_TMR32\_setPeriodic}!EF\_TMR32.h@{EF\_TMR32.h}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setPeriodic()}{EF\_TMR32\_setPeriodic()}}
+{\footnotesize\ttfamily void EF\+\_\+\+TMR32\+\_\+set\+Periodic (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{tmr32\+\_\+base }\end{DoxyParamCaption})}
+
+
+
+set the timer to be periodic 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmr32\+\_\+base} & The base memory address of TMR32 registers. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{CF__TMR32_8h_a7542ec9a8e57ac54e00cadee6d0ba62b}\label{CF__TMR32_8h_a7542ec9a8e57ac54e00cadee6d0ba62b} 
+\index{EF\_TMR32.h@{EF\_TMR32.h}!EF\_TMR32\_setPWM0MatchingCMPXAction@{EF\_TMR32\_setPWM0MatchingCMPXAction}}
+\index{EF\_TMR32\_setPWM0MatchingCMPXAction@{EF\_TMR32\_setPWM0MatchingCMPXAction}!EF\_TMR32.h@{EF\_TMR32.h}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setPWM0MatchingCMPXAction()}{EF\_TMR32\_setPWM0MatchingCMPXAction()}}
+{\footnotesize\ttfamily void EF\+\_\+\+TMR32\+\_\+set\+PWM0\+Matching\+CMPXAction (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{tmr32\+\_\+base,  }\item[{enum \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1}{actions}}}]{action }\end{DoxyParamCaption})}
+
+
+
+set the action of PWM0 when the timer matches CMPX value while up counting 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmr32\+\_\+base} & The base memory address of TMR32 registers. \\
+\hline
+{\em action} & enum actions could be NONE, LOW, HIGH, or INVERT \\
+\hline
+\end{DoxyParams}
+\Hypertarget{CF__TMR32_8h_a66734223ea92dfeae86c7eac582e013e}\label{CF__TMR32_8h_a66734223ea92dfeae86c7eac582e013e} 
+\index{EF\_TMR32.h@{EF\_TMR32.h}!EF\_TMR32\_setPWM0MatchingCMPXDownCountAction@{EF\_TMR32\_setPWM0MatchingCMPXDownCountAction}}
+\index{EF\_TMR32\_setPWM0MatchingCMPXDownCountAction@{EF\_TMR32\_setPWM0MatchingCMPXDownCountAction}!EF\_TMR32.h@{EF\_TMR32.h}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setPWM0MatchingCMPXDownCountAction()}{EF\_TMR32\_setPWM0MatchingCMPXDownCountAction()}}
+{\footnotesize\ttfamily void EF\+\_\+\+TMR32\+\_\+set\+PWM0\+Matching\+CMPXDown\+Count\+Action (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{tmr32\+\_\+base,  }\item[{enum \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1}{actions}}}]{action }\end{DoxyParamCaption})}
+
+
+
+set the action of PWM0 when the timer matches CMPY value while down counting 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmr32\+\_\+base} & The base memory address of TMR32 registers. \\
+\hline
+{\em action} & enum actions could be NONE, LOW, HIGH, or INVERT \\
+\hline
+\end{DoxyParams}
+\Hypertarget{CF__TMR32_8h_aa708e75f62acfe3cca5de0201f58be84}\label{CF__TMR32_8h_aa708e75f62acfe3cca5de0201f58be84} 
+\index{EF\_TMR32.h@{EF\_TMR32.h}!EF\_TMR32\_setPWM0MatchingCMPYAction@{EF\_TMR32\_setPWM0MatchingCMPYAction}}
+\index{EF\_TMR32\_setPWM0MatchingCMPYAction@{EF\_TMR32\_setPWM0MatchingCMPYAction}!EF\_TMR32.h@{EF\_TMR32.h}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setPWM0MatchingCMPYAction()}{EF\_TMR32\_setPWM0MatchingCMPYAction()}}
+{\footnotesize\ttfamily void EF\+\_\+\+TMR32\+\_\+set\+PWM0\+Matching\+CMPYAction (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{tmr32\+\_\+base,  }\item[{enum \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1}{actions}}}]{action }\end{DoxyParamCaption})}
+
+
+
+set the action of PWM0 when the timer matches CMPY value while up counting 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmr32\+\_\+base} & The base memory address of TMR32 registers. \\
+\hline
+{\em action} & enum actions could be NONE, LOW, HIGH, or INVERT \\
+\hline
+\end{DoxyParams}
+\Hypertarget{CF__TMR32_8h_ac58bc6263f39d70a88d217956e50fefb}\label{CF__TMR32_8h_ac58bc6263f39d70a88d217956e50fefb} 
+\index{EF\_TMR32.h@{EF\_TMR32.h}!EF\_TMR32\_setPWM0MatchingCMPYDownCountAction@{EF\_TMR32\_setPWM0MatchingCMPYDownCountAction}}
+\index{EF\_TMR32\_setPWM0MatchingCMPYDownCountAction@{EF\_TMR32\_setPWM0MatchingCMPYDownCountAction}!EF\_TMR32.h@{EF\_TMR32.h}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setPWM0MatchingCMPYDownCountAction()}{EF\_TMR32\_setPWM0MatchingCMPYDownCountAction()}}
+{\footnotesize\ttfamily void EF\+\_\+\+TMR32\+\_\+set\+PWM0\+Matching\+CMPYDown\+Count\+Action (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{tmr32\+\_\+base,  }\item[{enum \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1}{actions}}}]{action }\end{DoxyParamCaption})}
+
+
+
+set the action of PWM0 when the timer matches CMPX value while down counting 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmr32\+\_\+base} & The base memory address of TMR32 registers. \\
+\hline
+{\em action} & enum actions could be NONE, LOW, HIGH, or INVERT \\
+\hline
+\end{DoxyParams}
+\Hypertarget{CF__TMR32_8h_a7711ca87edfd77457ad7d5246cd01978}\label{CF__TMR32_8h_a7711ca87edfd77457ad7d5246cd01978} 
+\index{EF\_TMR32.h@{EF\_TMR32.h}!EF\_TMR32\_setPWM0MatchingRELOADAction@{EF\_TMR32\_setPWM0MatchingRELOADAction}}
+\index{EF\_TMR32\_setPWM0MatchingRELOADAction@{EF\_TMR32\_setPWM0MatchingRELOADAction}!EF\_TMR32.h@{EF\_TMR32.h}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setPWM0MatchingRELOADAction()}{EF\_TMR32\_setPWM0MatchingRELOADAction()}}
+{\footnotesize\ttfamily void EF\+\_\+\+TMR32\+\_\+set\+PWM0\+Matching\+RELOADAction (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{tmr32\+\_\+base,  }\item[{enum \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1}{actions}}}]{action }\end{DoxyParamCaption})}
+
+
+
+set the action of PWM0 when the timer matches Reload value 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmr32\+\_\+base} & The base memory address of TMR32 registers. \\
+\hline
+{\em action} & enum actions could be NONE, LOW, HIGH, or INVERT \\
+\hline
+\end{DoxyParams}
+\Hypertarget{CF__TMR32_8h_a415cfe3592f54f68e3e8a8eaf116a693}\label{CF__TMR32_8h_a415cfe3592f54f68e3e8a8eaf116a693} 
+\index{EF\_TMR32.h@{EF\_TMR32.h}!EF\_TMR32\_setPWM0MatchingZeroAction@{EF\_TMR32\_setPWM0MatchingZeroAction}}
+\index{EF\_TMR32\_setPWM0MatchingZeroAction@{EF\_TMR32\_setPWM0MatchingZeroAction}!EF\_TMR32.h@{EF\_TMR32.h}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setPWM0MatchingZeroAction()}{EF\_TMR32\_setPWM0MatchingZeroAction()}}
+{\footnotesize\ttfamily void EF\+\_\+\+TMR32\+\_\+set\+PWM0\+Matching\+Zero\+Action (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{tmr32\+\_\+base,  }\item[{enum \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1}{actions}}}]{action }\end{DoxyParamCaption})}
+
+
+
+set the action of PWM0 when the timer matches Zero value 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmr32\+\_\+base} & The base memory address of TMR32 registers. \\
+\hline
+{\em action} & enum actions could be NONE, LOW, HIGH, or INVERT \\
+\hline
+\end{DoxyParams}
+\Hypertarget{CF__TMR32_8h_a96664e404ae630c57804cd9a3776f8cb}\label{CF__TMR32_8h_a96664e404ae630c57804cd9a3776f8cb} 
+\index{EF\_TMR32.h@{EF\_TMR32.h}!EF\_TMR32\_setPWM1MatchingCMPXAction@{EF\_TMR32\_setPWM1MatchingCMPXAction}}
+\index{EF\_TMR32\_setPWM1MatchingCMPXAction@{EF\_TMR32\_setPWM1MatchingCMPXAction}!EF\_TMR32.h@{EF\_TMR32.h}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setPWM1MatchingCMPXAction()}{EF\_TMR32\_setPWM1MatchingCMPXAction()}}
+{\footnotesize\ttfamily void EF\+\_\+\+TMR32\+\_\+set\+PWM1\+Matching\+CMPXAction (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{tmr32\+\_\+base,  }\item[{enum \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1}{actions}}}]{action }\end{DoxyParamCaption})}
+
+
+
+set the action of PWM1 when the timer matches CMPX value while up counting 
+
+set the action of PWM1 when the timer matches CMPY value while up counting
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmr32\+\_\+base} & The base memory address of TMR32 registers. \\
+\hline
+{\em action} & enum actions could be NONE, LOW, HIGH, or INVERT\\
+\hline
+\end{DoxyParams}
+set the action of PWM1 when the timer matches CMPX value while up counting
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmr32\+\_\+base} & The base memory address of TMR32 registers. \\
+\hline
+{\em action} & enum actions could be NONE, LOW, HIGH, or INVERT \\
+\hline
+\end{DoxyParams}
+\Hypertarget{CF__TMR32_8h_a3e2ca846ea20ff2262b8617f03b41e32}\label{CF__TMR32_8h_a3e2ca846ea20ff2262b8617f03b41e32} 
+\index{EF\_TMR32.h@{EF\_TMR32.h}!EF\_TMR32\_setPWM1MatchingCMPXDownCountAction@{EF\_TMR32\_setPWM1MatchingCMPXDownCountAction}}
+\index{EF\_TMR32\_setPWM1MatchingCMPXDownCountAction@{EF\_TMR32\_setPWM1MatchingCMPXDownCountAction}!EF\_TMR32.h@{EF\_TMR32.h}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setPWM1MatchingCMPXDownCountAction()}{EF\_TMR32\_setPWM1MatchingCMPXDownCountAction()}}
+{\footnotesize\ttfamily void EF\+\_\+\+TMR32\+\_\+set\+PWM1\+Matching\+CMPXDown\+Count\+Action (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{tmr32\+\_\+base,  }\item[{enum \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1}{actions}}}]{action }\end{DoxyParamCaption})}
+
+
+
+set the action of PWM1 when the timer matches CMPY value while down counting 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmr32\+\_\+base} & The base memory address of TMR32 registers. \\
+\hline
+{\em action} & enum actions could be NONE, LOW, HIGH, or INVERT \\
+\hline
+\end{DoxyParams}
+\Hypertarget{CF__TMR32_8h_a3db62bb1a46497d90950a630bdcd3d9a}\label{CF__TMR32_8h_a3db62bb1a46497d90950a630bdcd3d9a} 
+\index{EF\_TMR32.h@{EF\_TMR32.h}!EF\_TMR32\_setPWM1MatchingCMPYDownCountAction@{EF\_TMR32\_setPWM1MatchingCMPYDownCountAction}}
+\index{EF\_TMR32\_setPWM1MatchingCMPYDownCountAction@{EF\_TMR32\_setPWM1MatchingCMPYDownCountAction}!EF\_TMR32.h@{EF\_TMR32.h}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setPWM1MatchingCMPYDownCountAction()}{EF\_TMR32\_setPWM1MatchingCMPYDownCountAction()}}
+{\footnotesize\ttfamily void EF\+\_\+\+TMR32\+\_\+set\+PWM1\+Matching\+CMPYDown\+Count\+Action (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{tmr32\+\_\+base,  }\item[{enum \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1}{actions}}}]{action }\end{DoxyParamCaption})}
+
+
+
+set the action of PWM1 when the timer matches CMPX value while down counting 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmr32\+\_\+base} & The base memory address of TMR32 registers. \\
+\hline
+{\em action} & enum actions could be NONE, LOW, HIGH, or INVERT \\
+\hline
+\end{DoxyParams}
+\Hypertarget{CF__TMR32_8h_aa9393a186a487ca696ac55f78e54ae10}\label{CF__TMR32_8h_aa9393a186a487ca696ac55f78e54ae10} 
+\index{EF\_TMR32.h@{EF\_TMR32.h}!EF\_TMR32\_setPWM1MatchingRELOADAction@{EF\_TMR32\_setPWM1MatchingRELOADAction}}
+\index{EF\_TMR32\_setPWM1MatchingRELOADAction@{EF\_TMR32\_setPWM1MatchingRELOADAction}!EF\_TMR32.h@{EF\_TMR32.h}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setPWM1MatchingRELOADAction()}{EF\_TMR32\_setPWM1MatchingRELOADAction()}}
+{\footnotesize\ttfamily void EF\+\_\+\+TMR32\+\_\+set\+PWM1\+Matching\+RELOADAction (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{tmr32\+\_\+base,  }\item[{enum \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1}{actions}}}]{action }\end{DoxyParamCaption})}
+
+
+
+set the action of PWM1 when the timer matches Reload value 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmr32\+\_\+base} & The base memory address of TMR32 registers. \\
+\hline
+{\em action} & enum actions could be NONE, LOW, HIGH, or INVERT \\
+\hline
+\end{DoxyParams}
+\Hypertarget{CF__TMR32_8h_aa9af6b2ce5b6e8828408c845345b0d44}\label{CF__TMR32_8h_aa9af6b2ce5b6e8828408c845345b0d44} 
+\index{EF\_TMR32.h@{EF\_TMR32.h}!EF\_TMR32\_setPWM1MatchingZeroAction@{EF\_TMR32\_setPWM1MatchingZeroAction}}
+\index{EF\_TMR32\_setPWM1MatchingZeroAction@{EF\_TMR32\_setPWM1MatchingZeroAction}!EF\_TMR32.h@{EF\_TMR32.h}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setPWM1MatchingZeroAction()}{EF\_TMR32\_setPWM1MatchingZeroAction()}}
+{\footnotesize\ttfamily void EF\+\_\+\+TMR32\+\_\+set\+PWM1\+Matching\+Zero\+Action (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{tmr32\+\_\+base,  }\item[{enum \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1}{actions}}}]{action }\end{DoxyParamCaption})}
+
+
+
+set the action of PWM1 when the timer matches Zero value 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmr32\+\_\+base} & The base memory address of TMR32 registers. \\
+\hline
+{\em action} & enum actions could be NONE, LOW, HIGH, or INVERT \\
+\hline
+\end{DoxyParams}
+\Hypertarget{CF__TMR32_8h_a2b6b972507a6ad0aa364a4024f2cbdfb}\label{CF__TMR32_8h_a2b6b972507a6ad0aa364a4024f2cbdfb} 
+\index{EF\_TMR32.h@{EF\_TMR32.h}!EF\_TMR32\_setRELOAD@{EF\_TMR32\_setRELOAD}}
+\index{EF\_TMR32\_setRELOAD@{EF\_TMR32\_setRELOAD}!EF\_TMR32.h@{EF\_TMR32.h}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setRELOAD()}{EF\_TMR32\_setRELOAD()}}
+{\footnotesize\ttfamily void EF\+\_\+\+TMR32\+\_\+set\+RELOAD (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{tmr32\+\_\+base,  }\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+set the timer reload value 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmr32\+\_\+base} & The base memory address of TMR32 registers. \\
+\hline
+{\em value} & timer reload value \\
+\hline
+\end{DoxyParams}
+\Hypertarget{CF__TMR32_8h_a20f666530bb16f3862ab0a830fd3fe5e}\label{CF__TMR32_8h_a20f666530bb16f3862ab0a830fd3fe5e} 
+\index{EF\_TMR32.h@{EF\_TMR32.h}!EF\_TMR32\_setUpCount@{EF\_TMR32\_setUpCount}}
+\index{EF\_TMR32\_setUpCount@{EF\_TMR32\_setUpCount}!EF\_TMR32.h@{EF\_TMR32.h}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setUpCount()}{EF\_TMR32\_setUpCount()}}
+{\footnotesize\ttfamily void EF\+\_\+\+TMR32\+\_\+set\+Up\+Count (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{tmr32\+\_\+base }\end{DoxyParamCaption})}
+
+
+
+set the timer direction to be up counting 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmr32\+\_\+base} & The base memory address of TMR32 registers. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{CF__TMR32_8h_a829b564412b2c84a8c66af4147943f29}\label{CF__TMR32_8h_a829b564412b2c84a8c66af4147943f29} 
+\index{EF\_TMR32.h@{EF\_TMR32.h}!EF\_TMR32\_setUpDownCount@{EF\_TMR32\_setUpDownCount}}
+\index{EF\_TMR32\_setUpDownCount@{EF\_TMR32\_setUpDownCount}!EF\_TMR32.h@{EF\_TMR32.h}}
+\doxysubsubsection{\texorpdfstring{EF\_TMR32\_setUpDownCount()}{EF\_TMR32\_setUpDownCount()}}
+{\footnotesize\ttfamily void EF\+\_\+\+TMR32\+\_\+set\+Up\+Down\+Count (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{tmr32\+\_\+base }\end{DoxyParamCaption})}
+
+
+
+set the timer direction to be up/down counting 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tmr32\+\_\+base} & The base memory address of TMR32 registers. \\
+\hline
+\end{DoxyParams}

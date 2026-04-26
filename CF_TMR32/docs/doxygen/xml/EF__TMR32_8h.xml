@@ -1,0 +1,1279 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="CF__TMR32_8h" kind="file" language="C++">
+    <compoundname>CF_TMR32.h</compoundname>
+    <includes refid="CF__TMR32__regs_8h" local="no">CF_TMR32_regs.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">stdbool.h</includes>
+    <includedby refid="CF__TMR32_8c" local="no">CF_TMR32.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>CF_TMR32.h</label>
+        <link refid="CF__TMR32_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>CF_TMR32_regs.h</label>
+        <link refid="CF__TMR32__regs_8h"/>
+      </node>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="3">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>CF_TMR32.c</label>
+        <link refid="CF__TMR32_8c"/>
+      </node>
+      <node id="1">
+        <label>CF_TMR32.h</label>
+        <link refid="CF__TMR32_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" prot="public" static="no" strong="no">
+        <type></type>
+        <name>actions</name>
+        <enumvalue id="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1ac157bdf0b85a40d2619cbc8bc1ae5fe2" prot="public">
+          <name>NONE</name>
+          <initializer>= 0b00</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1a6a226f4143ca3b18999551694cdb72a8" prot="public">
+          <name>LOW</name>
+          <initializer>= 0b01</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1a0c3a1dacf94061154b3ee354359c5893" prot="public">
+          <name>HIGH</name>
+          <initializer>= 0b10</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1ab5f95af56a0f14f0032750594b523c95" prot="public">
+          <name>INVERT</name>
+          <initializer>= 0b11</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.h" line="8" column="1" bodyfile="CF_TMR32.h" bodystart="8" bodyend="8"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="CF__TMR32_8h_1a0b98a7924dfc60cc5ce81fac86757d88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_enable</definition>
+        <argsstring>(uint32_t tmr32_base)</argsstring>
+        <name>CF_TMR32_enable</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <briefdescription>
+<para>enables timer by setting &quot;TE&quot; bit in the CTRL register to 1 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.h" line="14" column="6" bodyfile="CF_TMR32.c" bodystart="11" bodyend="17" declfile="CF_TMR32.h" declline="14" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8h_1a6f724f1aced4bcfe4b8107c9b6fa6d8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_restart</definition>
+        <argsstring>(uint32_t tmr32_base)</argsstring>
+        <name>CF_TMR32_restart</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <briefdescription>
+<para>enables timer re-start; used in the one-shot mode to restart the timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.h" line="20" column="6" bodyfile="CF_TMR32.c" bodystart="19" bodyend="25" declfile="CF_TMR32.h" declline="20" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8h_1a09cfca084bb5360d3cf214b2bffc9b2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_PWM0Enable</definition>
+        <argsstring>(uint32_t tmr32_base)</argsstring>
+        <name>CF_TMR32_PWM0Enable</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <briefdescription>
+<para>enables PWM0 by setting &quot;P0E&quot; bit in the CTRL register to 1 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.h" line="26" column="6" bodyfile="CF_TMR32.c" bodystart="27" bodyend="33" declfile="CF_TMR32.h" declline="26" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8h_1a135d5af1253e1f9f69b08d4e41dd02ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_PWM1Enable</definition>
+        <argsstring>(uint32_t tmr32_base)</argsstring>
+        <name>CF_TMR32_PWM1Enable</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <briefdescription>
+<para>enables PWM1 by setting &quot;P1E&quot; bit in the CTRL register to 1 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.h" line="32" column="6" bodyfile="CF_TMR32.c" bodystart="35" bodyend="41" declfile="CF_TMR32.h" declline="32" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8h_1a921c61fb121520bc93344f81ad97a0d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_deadtimeEnable</definition>
+        <argsstring>(uint32_t tmr32_base)</argsstring>
+        <name>CF_TMR32_deadtimeEnable</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <briefdescription>
+<para>enables deadtime by setting &quot;DTE&quot; bit in the CTRL register to 1 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.h" line="38" column="6" bodyfile="CF_TMR32.c" bodystart="43" bodyend="49" declfile="CF_TMR32.h" declline="38" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8h_1a88b4da2266667bc4842db996d5b0b62e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_PWM0Invert</definition>
+        <argsstring>(uint32_t tmr32_base)</argsstring>
+        <name>CF_TMR32_PWM0Invert</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <briefdescription>
+<para>invert PWM0 by setting &quot;P0I&quot; bit in the CTRL register to 1 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.h" line="44" column="6" bodyfile="CF_TMR32.c" bodystart="51" bodyend="57" declfile="CF_TMR32.h" declline="44" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8h_1ae13e58eda13d7f51a8326241c6f2b3e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_PWM1Invert</definition>
+        <argsstring>(uint32_t tmr32_base)</argsstring>
+        <name>CF_TMR32_PWM1Invert</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <briefdescription>
+<para>invert PWM1 by setting &quot;P1I&quot; bit in the CTRL register to 1 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.h" line="50" column="6" bodyfile="CF_TMR32.c" bodystart="59" bodyend="65" declfile="CF_TMR32.h" declline="50" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8h_1a20f666530bb16f3862ab0a830fd3fe5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_setUpCount</definition>
+        <argsstring>(uint32_t tmr32_base)</argsstring>
+        <name>CF_TMR32_setUpCount</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <briefdescription>
+<para>set the timer direction to be up counting </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.h" line="56" column="6" bodyfile="CF_TMR32.c" bodystart="67" bodyend="76" declfile="CF_TMR32.h" declline="56" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8h_1af83cff23e161747858588bb6f87cdfb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_setDownCount</definition>
+        <argsstring>(uint32_t tmr32_base)</argsstring>
+        <name>CF_TMR32_setDownCount</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <briefdescription>
+<para>set the timer direction to be down counting </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.h" line="62" column="6" bodyfile="CF_TMR32.c" bodystart="78" bodyend="87" declfile="CF_TMR32.h" declline="62" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8h_1a829b564412b2c84a8c66af4147943f29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_setUpDownCount</definition>
+        <argsstring>(uint32_t tmr32_base)</argsstring>
+        <name>CF_TMR32_setUpDownCount</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <briefdescription>
+<para>set the timer direction to be up/down counting </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.h" line="68" column="6" bodyfile="CF_TMR32.c" bodystart="89" bodyend="98" declfile="CF_TMR32.h" declline="68" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8h_1aeefe8fecbe7223302c773973b21975c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_setPeriodic</definition>
+        <argsstring>(uint32_t tmr32_base)</argsstring>
+        <name>CF_TMR32_setPeriodic</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <briefdescription>
+<para>set the timer to be periodic </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.h" line="74" column="6" bodyfile="CF_TMR32.c" bodystart="100" bodyend="106" declfile="CF_TMR32.h" declline="74" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8h_1a82340cdad934dca7031edc00c9a2d8df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_setOneShot</definition>
+        <argsstring>(uint32_t tmr32_base)</argsstring>
+        <name>CF_TMR32_setOneShot</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <briefdescription>
+<para>set the timer to be one shot </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.h" line="80" column="6" bodyfile="CF_TMR32.c" bodystart="108" bodyend="114" declfile="CF_TMR32.h" declline="80" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8h_1a415cfe3592f54f68e3e8a8eaf116a693" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_setPWM0MatchingZeroAction</definition>
+        <argsstring>(uint32_t tmr32_base, enum actions action)</argsstring>
+        <name>CF_TMR32_setPWM0MatchingZeroAction</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref></type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+<para>set the action of PWM0 when the timer matches Zero value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>enum actions could be NONE, LOW, HIGH, or INVERT </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.h" line="87" column="6" bodyfile="CF_TMR32.c" bodystart="116" bodyend="126" declfile="CF_TMR32.h" declline="87" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8h_1a7542ec9a8e57ac54e00cadee6d0ba62b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_setPWM0MatchingCMPXAction</definition>
+        <argsstring>(uint32_t tmr32_base, enum actions action)</argsstring>
+        <name>CF_TMR32_setPWM0MatchingCMPXAction</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref></type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+<para>set the action of PWM0 when the timer matches CMPX value while up counting </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>enum actions could be NONE, LOW, HIGH, or INVERT </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.h" line="94" column="6" bodyfile="CF_TMR32.c" bodystart="128" bodyend="138" declfile="CF_TMR32.h" declline="94" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8h_1aa708e75f62acfe3cca5de0201f58be84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_setPWM0MatchingCMPYAction</definition>
+        <argsstring>(uint32_t tmr32_base, enum actions action)</argsstring>
+        <name>CF_TMR32_setPWM0MatchingCMPYAction</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref></type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+<para>set the action of PWM0 when the timer matches CMPY value while up counting </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>enum actions could be NONE, LOW, HIGH, or INVERT </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.h" line="101" column="6" bodyfile="CF_TMR32.c" bodystart="140" bodyend="150" declfile="CF_TMR32.h" declline="101" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8h_1a7711ca87edfd77457ad7d5246cd01978" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_setPWM0MatchingRELOADAction</definition>
+        <argsstring>(uint32_t tmr32_base, enum actions action)</argsstring>
+        <name>CF_TMR32_setPWM0MatchingRELOADAction</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref></type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+<para>set the action of PWM0 when the timer matches Reload value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>enum actions could be NONE, LOW, HIGH, or INVERT </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.h" line="108" column="6" bodyfile="CF_TMR32.c" bodystart="152" bodyend="162" declfile="CF_TMR32.h" declline="108" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8h_1ac58bc6263f39d70a88d217956e50fefb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_setPWM0MatchingCMPYDownCountAction</definition>
+        <argsstring>(uint32_t tmr32_base, enum actions action)</argsstring>
+        <name>CF_TMR32_setPWM0MatchingCMPYDownCountAction</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref></type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+<para>set the action of PWM0 when the timer matches CMPX value while down counting </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>enum actions could be NONE, LOW, HIGH, or INVERT </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.h" line="115" column="6" bodyfile="CF_TMR32.c" bodystart="164" bodyend="174" declfile="CF_TMR32.h" declline="115" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8h_1a66734223ea92dfeae86c7eac582e013e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_setPWM0MatchingCMPXDownCountAction</definition>
+        <argsstring>(uint32_t tmr32_base, enum actions action)</argsstring>
+        <name>CF_TMR32_setPWM0MatchingCMPXDownCountAction</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref></type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+<para>set the action of PWM0 when the timer matches CMPY value while down counting </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>enum actions could be NONE, LOW, HIGH, or INVERT </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.h" line="122" column="6" bodyfile="CF_TMR32.c" bodystart="176" bodyend="186" declfile="CF_TMR32.h" declline="122" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8h_1aa9af6b2ce5b6e8828408c845345b0d44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_setPWM1MatchingZeroAction</definition>
+        <argsstring>(uint32_t tmr32_base, enum actions action)</argsstring>
+        <name>CF_TMR32_setPWM1MatchingZeroAction</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref></type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+<para>set the action of PWM1 when the timer matches Zero value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>enum actions could be NONE, LOW, HIGH, or INVERT </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.h" line="129" column="6" bodyfile="CF_TMR32.c" bodystart="188" bodyend="198" declfile="CF_TMR32.h" declline="129" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8h_1a96664e404ae630c57804cd9a3776f8cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_setPWM1MatchingCMPXAction</definition>
+        <argsstring>(uint32_t tmr32_base, enum actions action)</argsstring>
+        <name>CF_TMR32_setPWM1MatchingCMPXAction</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref></type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+<para>set the action of PWM1 when the timer matches CMPX value while up counting </para>
+        </briefdescription>
+        <detaileddescription>
+<para>set the action of PWM1 when the timer matches CMPY value while up counting</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>enum actions could be NONE, LOW, HIGH, or INVERT</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+set the action of PWM1 when the timer matches CMPX value while up counting</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>enum actions could be NONE, LOW, HIGH, or INVERT </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.h" line="136" column="6" bodyfile="CF_TMR32.c" bodystart="200" bodyend="210" declfile="CF_TMR32.h" declline="136" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8h_1aa9393a186a487ca696ac55f78e54ae10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_setPWM1MatchingRELOADAction</definition>
+        <argsstring>(uint32_t tmr32_base, enum actions action)</argsstring>
+        <name>CF_TMR32_setPWM1MatchingRELOADAction</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref></type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+<para>set the action of PWM1 when the timer matches Reload value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>enum actions could be NONE, LOW, HIGH, or INVERT </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.h" line="150" column="6" bodyfile="CF_TMR32.c" bodystart="224" bodyend="234" declfile="CF_TMR32.h" declline="150" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8h_1a3db62bb1a46497d90950a630bdcd3d9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_setPWM1MatchingCMPYDownCountAction</definition>
+        <argsstring>(uint32_t tmr32_base, enum actions action)</argsstring>
+        <name>CF_TMR32_setPWM1MatchingCMPYDownCountAction</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref></type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+<para>set the action of PWM1 when the timer matches CMPX value while down counting </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>enum actions could be NONE, LOW, HIGH, or INVERT </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.h" line="157" column="6" bodyfile="CF_TMR32.c" bodystart="236" bodyend="246" declfile="CF_TMR32.h" declline="157" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8h_1a3e2ca846ea20ff2262b8617f03b41e32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_setPWM1MatchingCMPXDownCountAction</definition>
+        <argsstring>(uint32_t tmr32_base, enum actions action)</argsstring>
+        <name>CF_TMR32_setPWM1MatchingCMPXDownCountAction</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref></type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+<para>set the action of PWM1 when the timer matches CMPY value while down counting </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>enum actions could be NONE, LOW, HIGH, or INVERT </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.h" line="164" column="6" bodyfile="CF_TMR32.c" bodystart="248" bodyend="258" declfile="CF_TMR32.h" declline="164" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8h_1a2b6b972507a6ad0aa364a4024f2cbdfb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_setRELOAD</definition>
+        <argsstring>(uint32_t tmr32_base, int value)</argsstring>
+        <name>CF_TMR32_setRELOAD</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>set the timer reload value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>timer reload value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.h" line="171" column="6" bodyfile="CF_TMR32.c" bodystart="260" bodyend="266" declfile="CF_TMR32.h" declline="171" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8h_1a3b643a20832d82a45cf46b18e4100bb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CF_TMR32_getRELOAD</definition>
+        <argsstring>(uint32_t tmr32_base)</argsstring>
+        <name>CF_TMR32_getRELOAD</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <briefdescription>
+<para>get the timer reload value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>reload register value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.h" line="178" column="5" bodyfile="CF_TMR32.c" bodystart="268" bodyend="274" declfile="CF_TMR32.h" declline="178" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8h_1a85d393473b33bd74a65798519b322b95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_setCMPX</definition>
+        <argsstring>(uint32_t tmr32_base, int value)</argsstring>
+        <name>CF_TMR32_setCMPX</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>set the CMPX register value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CMPX value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.h" line="185" column="6" bodyfile="CF_TMR32.c" bodystart="276" bodyend="282" declfile="CF_TMR32.h" declline="185" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8h_1a7db9f7a285db0b879dfaef4d98cfbdca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CF_TMR32_getCMPX</definition>
+        <argsstring>(uint32_t tmr32_base)</argsstring>
+        <name>CF_TMR32_getCMPX</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <briefdescription>
+<para>get the CMPX register value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>CMPX register value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.h" line="192" column="5" bodyfile="CF_TMR32.c" bodystart="284" bodyend="290" declfile="CF_TMR32.h" declline="192" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8h_1a1fe62917e80107ffc55ac64d071f161f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_setCMPY</definition>
+        <argsstring>(uint32_t tmr32_base, int value)</argsstring>
+        <name>CF_TMR32_setCMPY</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>set the CMPY register value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CMPY value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.h" line="199" column="6" bodyfile="CF_TMR32.c" bodystart="292" bodyend="298" declfile="CF_TMR32.h" declline="199" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8h_1a50616b48ff6f7a191c163badcfbddf54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CF_TMR32_getCMPY</definition>
+        <argsstring>(uint32_t tmr32_base)</argsstring>
+        <name>CF_TMR32_getCMPY</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <briefdescription>
+<para>get the CMPY register value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>CMPY register value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.h" line="206" column="5" bodyfile="CF_TMR32.c" bodystart="300" bodyend="306" declfile="CF_TMR32.h" declline="206" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8h_1a692bbc4af5c80220a3935ec4b1268676" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CF_TMR32_getTMR</definition>
+        <argsstring>(uint32_t tmr32_base)</argsstring>
+        <name>CF_TMR32_getTMR</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <briefdescription>
+<para>get the current value of the timer </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>current timer value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.h" line="213" column="5" bodyfile="CF_TMR32.c" bodystart="308" bodyend="314" declfile="CF_TMR32.h" declline="213" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8h_1a5e18c1c7fb1332277c7fea24cae7dd91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_setDeadtime</definition>
+        <argsstring>(uint32_t tmr32_base, int value)</argsstring>
+        <name>CF_TMR32_setDeadtime</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>set the timer deadtime register value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>deadtime register value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.h" line="220" column="6" bodyfile="CF_TMR32.c" bodystart="316" bodyend="322" declfile="CF_TMR32.h" declline="220" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>CF_UART_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CF_UART_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="CF__TMR32__regs_8h" kindref="compound">CF_TMR32_regs.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref><sp/>{<ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1ac157bdf0b85a40d2619cbc8bc1ae5fe2" kindref="member">NONE</ref><sp/>=<sp/>0b00,<sp/><ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1a6a226f4143ca3b18999551694cdb72a8" kindref="member">LOW</ref><sp/>=<sp/>0b01,<sp/><ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1a0c3a1dacf94061154b3ee354359c5893" kindref="member">HIGH</ref><sp/>=<sp/>0b10,<sp/><ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1ab5f95af56a0f14f0032750594b523c95" kindref="member">INVERT</ref><sp/>=<sp/>0b11};</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1a0b98a7924dfc60cc5ce81fac86757d88" kindref="member">CF_TMR32_enable</ref>(uint32_t<sp/>tmr32_base);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1a6f724f1aced4bcfe4b8107c9b6fa6d8a" kindref="member">CF_TMR32_restart</ref>(uint32_t<sp/>tmr32_base);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1a09cfca084bb5360d3cf214b2bffc9b2e" kindref="member">CF_TMR32_PWM0Enable</ref>(uint32_t<sp/>tmr32_base);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1a135d5af1253e1f9f69b08d4e41dd02ea" kindref="member">CF_TMR32_PWM1Enable</ref>(uint32_t<sp/>tmr32_base);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1a921c61fb121520bc93344f81ad97a0d7" kindref="member">CF_TMR32_deadtimeEnable</ref>(uint32_t<sp/>tmr32_base);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1a88b4da2266667bc4842db996d5b0b62e" kindref="member">CF_TMR32_PWM0Invert</ref>(uint32_t<sp/>tmr32_base);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1ae13e58eda13d7f51a8326241c6f2b3e1" kindref="member">CF_TMR32_PWM1Invert</ref>(uint32_t<sp/>tmr32_base);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1a20f666530bb16f3862ab0a830fd3fe5e" kindref="member">CF_TMR32_setUpCount</ref>(uint32_t<sp/>tmr32_base);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1af83cff23e161747858588bb6f87cdfb4" kindref="member">CF_TMR32_setDownCount</ref>(uint32_t<sp/>tmr32_base);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1a829b564412b2c84a8c66af4147943f29" kindref="member">CF_TMR32_setUpDownCount</ref>(uint32_t<sp/>tmr32_base);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1aeefe8fecbe7223302c773973b21975c1" kindref="member">CF_TMR32_setPeriodic</ref>(uint32_t<sp/>tmr32_base);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1a82340cdad934dca7031edc00c9a2d8df" kindref="member">CF_TMR32_setOneShot</ref>(uint32_t<sp/>tmr32_base);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1a415cfe3592f54f68e3e8a8eaf116a693" kindref="member">CF_TMR32_setPWM0MatchingZeroAction</ref>(uint32_t<sp/>tmr32_base,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref><sp/>action);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1a7542ec9a8e57ac54e00cadee6d0ba62b" kindref="member">CF_TMR32_setPWM0MatchingCMPXAction</ref>(uint32_t<sp/>tmr32_base,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref><sp/>action);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1aa708e75f62acfe3cca5de0201f58be84" kindref="member">CF_TMR32_setPWM0MatchingCMPYAction</ref>(uint32_t<sp/>tmr32_base,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref><sp/>action);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1a7711ca87edfd77457ad7d5246cd01978" kindref="member">CF_TMR32_setPWM0MatchingRELOADAction</ref>(uint32_t<sp/>tmr32_base,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref><sp/>action);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1ac58bc6263f39d70a88d217956e50fefb" kindref="member">CF_TMR32_setPWM0MatchingCMPYDownCountAction</ref>(uint32_t<sp/>tmr32_base,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref><sp/>action);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1a66734223ea92dfeae86c7eac582e013e" kindref="member">CF_TMR32_setPWM0MatchingCMPXDownCountAction</ref>(uint32_t<sp/>tmr32_base,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref><sp/>action);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1aa9af6b2ce5b6e8828408c845345b0d44" kindref="member">CF_TMR32_setPWM1MatchingZeroAction</ref>(uint32_t<sp/>tmr32_base,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref><sp/>action);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1a96664e404ae630c57804cd9a3776f8cb" kindref="member">CF_TMR32_setPWM1MatchingCMPXAction</ref>(uint32_t<sp/>tmr32_base,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref><sp/>action);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1a96664e404ae630c57804cd9a3776f8cb" kindref="member">CF_TMR32_setPWM1MatchingCMPXAction</ref>(uint32_t<sp/>tmr32_base,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref><sp/>action);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1aa9393a186a487ca696ac55f78e54ae10" kindref="member">CF_TMR32_setPWM1MatchingRELOADAction</ref>(uint32_t<sp/>tmr32_base,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref><sp/>action);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1a3db62bb1a46497d90950a630bdcd3d9a" kindref="member">CF_TMR32_setPWM1MatchingCMPYDownCountAction</ref>(uint32_t<sp/>tmr32_base,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref><sp/>action);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1a3e2ca846ea20ff2262b8617f03b41e32" kindref="member">CF_TMR32_setPWM1MatchingCMPXDownCountAction</ref>(uint32_t<sp/>tmr32_base,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref><sp/>action);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1a2b6b972507a6ad0aa364a4024f2cbdfb" kindref="member">CF_TMR32_setRELOAD</ref><sp/>(uint32_t<sp/>tmr32_base,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1a3b643a20832d82a45cf46b18e4100bb5" kindref="member">CF_TMR32_getRELOAD</ref><sp/>(uint32_t<sp/>tmr32_base);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1a85d393473b33bd74a65798519b322b95" kindref="member">CF_TMR32_setCMPX</ref><sp/>(uint32_t<sp/>tmr32_base,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1a7db9f7a285db0b879dfaef4d98cfbdca" kindref="member">CF_TMR32_getCMPX</ref><sp/>(uint32_t<sp/>tmr32_base);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1a1fe62917e80107ffc55ac64d071f161f" kindref="member">CF_TMR32_setCMPY</ref><sp/>(uint32_t<sp/>tmr32_base,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1a50616b48ff6f7a191c163badcfbddf54" kindref="member">CF_TMR32_getCMPY</ref><sp/>(uint32_t<sp/>tmr32_base);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1a692bbc4af5c80220a3935ec4b1268676" kindref="member">CF_TMR32_getTMR</ref><sp/>(uint32_t<sp/>tmr32_base);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1a5e18c1c7fb1332277c7fea24cae7dd91" kindref="member">CF_TMR32_setDeadtime</ref><sp/>(uint32_t<sp/>tmr32_base,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="CF_TMR32.h"/>
+  </compounddef>
+</doxygen>

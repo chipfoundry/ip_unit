@@ -1,0 +1,199 @@
+info:
+  name: CF_USB_CDC_WRAPPER
+  description: AHBL and APB bus wrappers with transmit and receive FIFOs for the verilog implementation of usb cdc in [ulixxe/usb_cdc](https://github.com/efabless/usb_cdc) repository 
+  repo: https://github.com/chipfoundry/CF_USB_CDC_WRAPPER
+  owner: Efabless Corp.
+  license: APACHE 2.0
+  author: Efabless Corp.
+  email: ip_admin@efabless.com
+  version: v1.0.0
+  date: 30-1-2025
+  category: digital
+  tags:
+    - peripheral
+    - comm
+    - usb
+    - cdc
+  bus:
+    - APB
+    - AHBL
+  type: soft
+  status: verified
+  cell_count:
+    - IP: N/A
+    - APB: N/A
+    - AHBL: N/A
+  width: 0.0
+  height: 0.0
+  technology: n/a
+  clock_freq_mhz:
+    - IP: N/A
+    - APB: N/A
+    - AHBL: N/A
+  digital_supply_voltage: n/a
+  analog_supply_voltage: n/a
+  irq_reg_offset: 0xFF00
+  fifo_reg_offset: 0xFE00
+
+ports:
+  - name: rx_fifo_rd
+    width: 1
+    direction: input
+    description: Read from RX FIFO signal 
+  - name: rx_fifo_full
+    width: 1
+    direction: output 
+    description: RX full flag
+  - name: rx_fifo_empty
+    width: 1
+    direction: output
+    description: RX empty flag
+  - name: rx_fifo_level
+    width: 4
+    direction: output
+    description: The current level of RX FIFO
+  - name: rx_fifo_rdata
+    width: 8
+    direction: output 
+    description: Received Data 
+  - name: rx_fifo_th
+    width: 4
+    direction: input
+    description: RX FIFO Threshold 
+  - name: rx_fifo_level_above
+    width: 1
+    direction: output
+    description: RX level above flag
+  - name: tx_fifo_wr
+    width: 1
+    direction: input 
+    description: Write to TX FIFO signal 
+  - name: tx_fifo_full
+    width: 1
+    direction: output 
+    description: TX full flag
+  - name: tx_fifo_empty
+    width: 1
+    direction: output
+    description: TX empty flag
+  - name: tx_fifo_level
+    width: 4
+    direction: output
+    description: The current level of TX FIFO
+  - name: tx_fifo_wdata
+    width: 8
+    direction: input 
+    description: Transmitted Data 
+  - name: tx_fifo_th
+    width: 4
+    direction: input
+    description: TX FIFO Threshold 
+  - name: tx_fifo_level_below
+    width: 1
+    direction: output
+    description: TX level belows flag
+
+external_interface:
+  - name: dp_pu_o
+    port: dp_pu_o
+    direction: output
+    description: 1.5kΩ D+ pullup enable
+    width: 1
+  - name: dp_rx_i
+    port: dp_rx_i
+    direction: input
+    description: D+ input bit stream
+    width: 1
+  - name: dn_rx_i
+    port: dn_rx_i
+    direction: input
+    description: D- input bit stream
+    width: 1
+  - name: dp_tx_o
+    port: dp_tx_o
+    direction: output
+    description: D+ output bit stream
+    width: 1
+  - name: dn_tx_o
+    port: dn_tx_o
+    direction: output
+    description: D- output bit stream
+    width: 1
+  - name: tx_en_o
+    port: tx_en_o
+    direction: output
+    description: D+/D- output enable
+    width: 1
+
+clock:
+  name: clk
+  gated: 'no'
+
+reset:
+  name: rst_n
+  level: 0
+
+registers:
+  - name: TXDATA
+    size: 8
+    mode: w
+    offset: 0
+    bit_access: no
+    read_port: tx_fifo_rdata
+    description: TX Data register; ; the interface to the Receive FIFO.
+  - name: RXDATA
+    size: 8
+    mode: r
+    offset: 4
+    bit_access: no
+    read_port: rx_fifo_rdata
+    description: RX Data register; the interface to the Receive FIFO.
+  - name: TXFIFOLEVEL
+    size: 4
+    mode: r
+    offset: 8
+    bit_access: no
+    read_port: tx_fifo_level
+    description: TX_FIFO Level Register.
+  - name: RXFIFOLEVEL
+    size: 4
+    mode: r
+    offset: 12
+    bit_access: no
+    read_port: rx_fifo_level
+    description: RX_FIFO Level Register.
+  - name: TXFIFOT
+    size: 4
+    mode: w
+    offset: 16
+    bit_access: no
+    read_port: tx_fifo_th
+    description: TX_FIFO Level Threshold Register.
+  - name: RXFIFOT
+    size: 4
+    mode: w
+    offset: 20
+    bit_access: no
+    read_port: rx_fifo_th
+    description: RX_FIFO Level Threshold Register.
+    
+flags:
+  - name: TXE
+    port: tx_fifo_empty
+    description: Transmit FIFO is Empty.
+  - name: TXB
+    port: tx_fifo_level_below
+    description: Transmit FIFO level is Below Threshold.
+  - name: RXF
+    port: rx_fifo_full
+    description: Receive FIFO is Full.
+  - name: RXA
+    port: rx_fifo_level_above
+    description: Receive FIFO level is Above Threshold.
+  - name: RXE
+    port: rx_fifo_empty
+    description: Receive FIFO is Empty.
+  - name: TXF
+    port: tx_fifo_full
+    description: Transmit FIFO is Full.
+

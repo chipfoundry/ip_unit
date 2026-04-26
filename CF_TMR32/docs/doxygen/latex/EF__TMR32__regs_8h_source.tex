@@ -1,0 +1,100 @@
+\doxysection{EF\+\_\+\+TMR32\+\_\+regs.\+h}
+\hypertarget{CF__TMR32__regs_8h_source}{}\label{CF__TMR32__regs_8h_source}\mbox{\hyperlink{CF__TMR32__regs_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ \ \ \ \ \ \ \ Copyright\ 2024\ Efabless\ Corp.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ \ \ \ \ \ \ \ Author:\ Mohamed\ Shalan\ (mshalan@aucegypt.edu)}}
+\DoxyCodeLine{00005\ \textcolor{comment}{}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ \ \ \ \ \ \ \ Licensed\ under\ the\ Apache\ License,\ Version\ 2.0\ (the\ "{}License"{});}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ \ \ \ \ \ \ \ you\ may\ not\ use\ this\ file\ except\ in\ compliance\ with\ the\ License.}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ \ \ \ \ \ \ \ You\ may\ obtain\ a\ copy\ of\ the\ License\ at}}
+\DoxyCodeLine{00009\ \textcolor{comment}{}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ \ \ \ http://www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{00011\ \textcolor{comment}{}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ \ \ \ \ \ \ \ Unless\ required\ by\ applicable\ law\ or\ agreed\ to\ in\ writing,\ software}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ \ \ \ \ \ \ \ distributed\ under\ the\ License\ is\ distributed\ on\ an\ "{}AS\ IS"{}\ BASIS,}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ \ \ \ \ \ \ \ WITHOUT\ WARRANTIES\ OR\ CONDITIONS\ OF\ ANY\ KIND,\ either\ express\ or\ implied.}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ \ \ \ \ \ \ \ See\ the\ License\ for\ the\ specific\ language\ governing\ permissions\ and}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ \ \ \ \ \ limitations\ under\ the\ License.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{}}
+\DoxyCodeLine{00018\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#ifndef\ EF\_TMR32REGS\_H}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ EF\_TMR32REGS\_H}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#ifndef\ IO\_TYPES}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ IO\_TYPES}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ \ \ \_\_R\ \ \ \ \ volatile\ const\ unsigned\ int}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ \ \ \_\_W\ \ \ \ \ volatile\ \ \ \ \ \ \ unsigned\ int}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ \ \ \_\_RW\ \ \ \ volatile\ \ \ \ \ \ \ unsigned\ int}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_CTRL\_REG\_TE\_BIT\ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_CTRL\_REG\_TE\_MASK\ \ \ \ \ \ \ 0x1}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_CTRL\_REG\_TS\_BIT\ \ \ \ \ \ \ \ 1}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_CTRL\_REG\_TS\_MASK\ \ \ \ \ \ \ 0x2}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_CTRL\_REG\_P0E\_BIT\ \ \ \ \ \ \ 2}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_CTRL\_REG\_P0E\_MASK\ \ \ \ \ \ 0x4}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_CTRL\_REG\_P1E\_BIT\ \ \ \ \ \ \ 3}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_CTRL\_REG\_P1E\_MASK\ \ \ \ \ \ 0x8}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_CTRL\_REG\_DTE\_BIT\ \ \ \ \ \ \ 4}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_CTRL\_REG\_DTE\_MASK\ \ \ \ \ \ 0x10}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_CTRL\_REG\_PI0\_BIT\ \ \ \ \ \ \ 5}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_CTRL\_REG\_PI0\_MASK\ \ \ \ \ \ 0x20}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_CTRL\_REG\_PI1\_BIT\ \ \ \ \ \ \ 6}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_CTRL\_REG\_PI1\_MASK\ \ \ \ \ \ 0x40}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_CFG\_REG\_DIR\_BIT\ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_CFG\_REG\_DIR\_MASK\ \ \ \ \ \ \ 0x3}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_CFG\_REG\_P\_BIT\ \ 2}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_CFG\_REG\_P\_MASK\ 0x4}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM0CFG\_REG\_E0\_BIT\ \ \ \ \ 0}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM0CFG\_REG\_E0\_MASK\ \ \ \ 0x3}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM0CFG\_REG\_E1\_BIT\ \ \ \ \ 2}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM0CFG\_REG\_E1\_MASK\ \ \ \ 0xc}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM0CFG\_REG\_E2\_BIT\ \ \ \ \ 4}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM0CFG\_REG\_E2\_MASK\ \ \ \ 0x30}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM0CFG\_REG\_E3\_BIT\ \ \ \ \ 6}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM0CFG\_REG\_E3\_MASK\ \ \ \ 0xc0}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM0CFG\_REG\_E4\_BIT\ \ \ \ \ 8}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM0CFG\_REG\_E4\_MASK\ \ \ \ 0x300}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM0CFG\_REG\_E5\_BIT\ \ \ \ \ 10}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM0CFG\_REG\_E5\_MASK\ \ \ \ 0xc00}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM1CFG\_REG\_E0\_BIT\ \ \ \ \ 0}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM1CFG\_REG\_E0\_MASK\ \ \ \ 0x3}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM1CFG\_REG\_E1\_BIT\ \ \ \ \ 2}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM1CFG\_REG\_E1\_MASK\ \ \ \ 0xc}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM1CFG\_REG\_E2\_BIT\ \ \ \ \ 4}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM1CFG\_REG\_E2\_MASK\ \ \ \ 0x30}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM1CFG\_REG\_E3\_BIT\ \ \ \ \ 6}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM1CFG\_REG\_E3\_MASK\ \ \ \ 0xc0}}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM1CFG\_REG\_E4\_BIT\ \ \ \ \ 8}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM1CFG\_REG\_E4\_MASK\ \ \ \ 0x300}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM1CFG\_REG\_E5\_BIT\ \ \ \ \ 10}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_PWM1CFG\_REG\_E5\_MASK\ \ \ \ 0xc00}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_TO\_FLAG\ \ \ \ \ \ \ \ 0x1}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_MX\_FLAG\ \ \ \ \ \ \ \ 0x2}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ EF\_TMR32\_MY\_FLAG\ \ \ \ \ \ \ \ 0x4}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct__CF__TMR32__TYPE__}{\_EF\_TMR32\_TYPE\_}}\ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{CF__TMR32__regs_8h_aef00c279597b188e4cdd14d288ddf77a}{\_\_R}}\ \ \ \ \ \mbox{\hyperlink{struct__CF__TMR32__TYPE___a4bf7305297d5a1b4d41265a94d5bc872}{TMR}};}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{CF__TMR32__regs_8h_ad8cfe7014044235a4c8d3239c2597f09}{\_\_W}}\ \ \ \ \ \mbox{\hyperlink{struct__CF__TMR32__TYPE___aa3ae792c2ebe1da3297110ebeb3466ad}{RELOAD}};}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{CF__TMR32__regs_8h_ad8cfe7014044235a4c8d3239c2597f09}{\_\_W}}\ \ \ \ \ \mbox{\hyperlink{struct__CF__TMR32__TYPE___a633ee055130fe09a100217016896b176}{PR}};}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{CF__TMR32__regs_8h_ad8cfe7014044235a4c8d3239c2597f09}{\_\_W}}\ \ \ \ \ \mbox{\hyperlink{struct__CF__TMR32__TYPE___ae43e19e8088a1fefc2dc18440543e33f}{CMPX}};}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{CF__TMR32__regs_8h_ad8cfe7014044235a4c8d3239c2597f09}{\_\_W}}\ \ \ \ \ \mbox{\hyperlink{struct__CF__TMR32__TYPE___a595ddce5ae660e566f43e8c15585a138}{CMPY}};}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{CF__TMR32__regs_8h_ad8cfe7014044235a4c8d3239c2597f09}{\_\_W}}\ \ \ \ \ \mbox{\hyperlink{struct__CF__TMR32__TYPE___ac5efd0912e6932652209129716a59140}{CTRL}};}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{CF__TMR32__regs_8h_ad8cfe7014044235a4c8d3239c2597f09}{\_\_W}}\ \ \ \ \ \mbox{\hyperlink{struct__CF__TMR32__TYPE___a147cc6d93ea18c5b8aa6fd7a6a343d22}{CFG}};}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{CF__TMR32__regs_8h_ad8cfe7014044235a4c8d3239c2597f09}{\_\_W}}\ \ \ \ \ \mbox{\hyperlink{struct__CF__TMR32__TYPE___a13319bf36918fad02652cf9636e0f3bd}{PWM0CFG}};}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{CF__TMR32__regs_8h_ad8cfe7014044235a4c8d3239c2597f09}{\_\_W}}\ \ \ \ \ \mbox{\hyperlink{struct__CF__TMR32__TYPE___ad2c30253ccd1145f45e2b5cf59df8355}{PWM1CFG}};}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{CF__TMR32__regs_8h_ad8cfe7014044235a4c8d3239c2597f09}{\_\_W}}\ \ \ \ \ \mbox{\hyperlink{struct__CF__TMR32__TYPE___aaf7ab19ccb2ec1d0352cbadb0e75024b}{PWMDT}};}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{CF__TMR32__regs_8h_aef00c279597b188e4cdd14d288ddf77a}{\_\_R}}\ \ \ \ \ \mbox{\hyperlink{struct__CF__TMR32__TYPE___a047f4e95d1fefc40346908f42f446d09}{reserved}}[950];}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{CF__TMR32__regs_8h_a81f369079976a46554fd9798ab035697}{\_\_RW}}\ \ \ \ \mbox{\hyperlink{struct__CF__TMR32__TYPE___a6b4ec960b5cb32cd892b210477fbc7c9}{im}};}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{CF__TMR32__regs_8h_aef00c279597b188e4cdd14d288ddf77a}{\_\_R}}\ \ \ \ \ \mbox{\hyperlink{struct__CF__TMR32__TYPE___a7256a3f78f32e653cdb409cc57baa56e}{mis}};}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{CF__TMR32__regs_8h_aef00c279597b188e4cdd14d288ddf77a}{\_\_R}}\ \ \ \ \ \mbox{\hyperlink{struct__CF__TMR32__TYPE___a1e691ee9153bdcb2333287f8ab6beba7}{ris}};}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{CF__TMR32__regs_8h_ad8cfe7014044235a4c8d3239c2597f09}{\_\_W}}\ \ \ \ \ \mbox{\hyperlink{struct__CF__TMR32__TYPE___a1f93e0a26343a96ee47812a8591d97e7}{icr}};}
+\DoxyCodeLine{00093\ \}\ \mbox{\hyperlink{CF__TMR32__regs_8h_a5ab4e3f4232149b200ef8d43a25c9082}{EF\_TMR32\_TYPE}};}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

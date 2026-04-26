@@ -1,0 +1,60 @@
+# Standalone IP repo: .github at repository root. Monorepo: /.github/workflows/verify-all.yaml.
+name: CF_QSPI_XIP_CTRL Verification
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        sim: [icarus]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install simulators
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y iverilog lcov
+
+      - name: Install Python dependencies
+        run: |
+          pip install --upgrade pip
+          pip install cf-ipm
+          pip install -r verify/pyuvm/requirements.txt
+
+      - name: Run tests (${{ matrix.sim }})
+        working-directory: verify/pyuvm
+        run: python test_runner.py
+        env:
+          SIM: ${{ matrix.sim }}
+
+      - name: Write job summary
+        if: always()
+        working-directory: verify/pyuvm
+        run: |
+          RESULTS="sim/${{ matrix.sim }}/merged/RESULTS.md"
+          echo "## CF_QSPI_XIP_CTRL Verification — ${{ matrix.sim }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ -f "$RESULTS" ]; then
+            cat "$RESULTS" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "> Tests did not produce a report." >> $GITHUB_STEP_SUMMARY
+          fi
+
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: results-${{ matrix.sim }}
+          path: verify/pyuvm/sim/

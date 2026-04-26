@@ -1,0 +1,111 @@
+\doxysection{EF\+\_\+\+TMR32.\+h}
+\hypertarget{CF__TMR32_8h_source}{}\label{CF__TMR32_8h_source}\mbox{\hyperlink{CF__TMR32_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ EF\_UART\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ EF\_UART\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{CF__TMR32__regs_8h}{EF\_TMR32\_regs.h}}>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1}{actions}}\ \{\mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1ac157bdf0b85a40d2619cbc8bc1ae5fe2}{NONE}}\ =\ 0b00,\ \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1a6a226f4143ca3b18999551694cdb72a8}{LOW}}\ =\ 0b01,\ \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1a0c3a1dacf94061154b3ee354359c5893}{HIGH}}\ =\ 0b10,\ \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1ab5f95af56a0f14f0032750594b523c95}{INVERT}}\ =\ 0b11\};}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00014\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{CF__TMR32_8h_a0b98a7924dfc60cc5ce81fac86757d88}{EF\_TMR32\_enable}}(uint32\_t\ tmr32\_base);}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00020\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{CF__TMR32_8h_a6f724f1aced4bcfe4b8107c9b6fa6d8a}{EF\_TMR32\_restart}}(uint32\_t\ tmr32\_base);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{CF__TMR32_8h_a09cfca084bb5360d3cf214b2bffc9b2e}{EF\_TMR32\_PWM0Enable}}(uint32\_t\ tmr32\_base);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00032\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{CF__TMR32_8h_a135d5af1253e1f9f69b08d4e41dd02ea}{EF\_TMR32\_PWM1Enable}}(uint32\_t\ tmr32\_base);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00038\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{CF__TMR32_8h_a921c61fb121520bc93344f81ad97a0d7}{EF\_TMR32\_deadtimeEnable}}(uint32\_t\ tmr32\_base);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00044\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{CF__TMR32_8h_a88b4da2266667bc4842db996d5b0b62e}{EF\_TMR32\_PWM0Invert}}(uint32\_t\ tmr32\_base);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00050\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{CF__TMR32_8h_ae13e58eda13d7f51a8326241c6f2b3e1}{EF\_TMR32\_PWM1Invert}}(uint32\_t\ tmr32\_base);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00056\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{CF__TMR32_8h_a20f666530bb16f3862ab0a830fd3fe5e}{EF\_TMR32\_setUpCount}}(uint32\_t\ tmr32\_base);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00062\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{CF__TMR32_8h_af83cff23e161747858588bb6f87cdfb4}{EF\_TMR32\_setDownCount}}(uint32\_t\ tmr32\_base);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00068\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{CF__TMR32_8h_a829b564412b2c84a8c66af4147943f29}{EF\_TMR32\_setUpDownCount}}(uint32\_t\ tmr32\_base);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00074\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{CF__TMR32_8h_aeefe8fecbe7223302c773973b21975c1}{EF\_TMR32\_setPeriodic}}(uint32\_t\ tmr32\_base);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00080\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{CF__TMR32_8h_a82340cdad934dca7031edc00c9a2d8df}{EF\_TMR32\_setOneShot}}(uint32\_t\ tmr32\_base);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00087\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{CF__TMR32_8h_a415cfe3592f54f68e3e8a8eaf116a693}{EF\_TMR32\_setPWM0MatchingZeroAction}}(uint32\_t\ tmr32\_base,\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1}{actions}}\ action);}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00094\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{CF__TMR32_8h_a7542ec9a8e57ac54e00cadee6d0ba62b}{EF\_TMR32\_setPWM0MatchingCMPXAction}}(uint32\_t\ tmr32\_base,\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1}{actions}}\ action);}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00101\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{CF__TMR32_8h_aa708e75f62acfe3cca5de0201f58be84}{EF\_TMR32\_setPWM0MatchingCMPYAction}}(uint32\_t\ tmr32\_base,\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1}{actions}}\ action);}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00108\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{CF__TMR32_8h_a7711ca87edfd77457ad7d5246cd01978}{EF\_TMR32\_setPWM0MatchingRELOADAction}}(uint32\_t\ tmr32\_base,\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1}{actions}}\ action);}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00115\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{CF__TMR32_8h_ac58bc6263f39d70a88d217956e50fefb}{EF\_TMR32\_setPWM0MatchingCMPYDownCountAction}}(uint32\_t\ tmr32\_base,\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1}{actions}}\ action);}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00122\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{CF__TMR32_8h_a66734223ea92dfeae86c7eac582e013e}{EF\_TMR32\_setPWM0MatchingCMPXDownCountAction}}(uint32\_t\ tmr32\_base,\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1}{actions}}\ action);}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00129\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{CF__TMR32_8h_aa9af6b2ce5b6e8828408c845345b0d44}{EF\_TMR32\_setPWM1MatchingZeroAction}}(uint32\_t\ tmr32\_base,\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1}{actions}}\ action);}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00136\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{CF__TMR32_8h_a96664e404ae630c57804cd9a3776f8cb}{EF\_TMR32\_setPWM1MatchingCMPXAction}}(uint32\_t\ tmr32\_base,\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1}{actions}}\ action);}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00143\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{CF__TMR32_8h_a96664e404ae630c57804cd9a3776f8cb}{EF\_TMR32\_setPWM1MatchingCMPXAction}}(uint32\_t\ tmr32\_base,\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1}{actions}}\ action);}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00150\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{CF__TMR32_8h_aa9393a186a487ca696ac55f78e54ae10}{EF\_TMR32\_setPWM1MatchingRELOADAction}}(uint32\_t\ tmr32\_base,\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1}{actions}}\ action);}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00157\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{CF__TMR32_8h_a3db62bb1a46497d90950a630bdcd3d9a}{EF\_TMR32\_setPWM1MatchingCMPYDownCountAction}}(uint32\_t\ tmr32\_base,\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1}{actions}}\ action);}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00164\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{CF__TMR32_8h_a3e2ca846ea20ff2262b8617f03b41e32}{EF\_TMR32\_setPWM1MatchingCMPXDownCountAction}}(uint32\_t\ tmr32\_base,\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{CF__TMR32_8h_af806efc6052edbc741683ec893bb2fe1}{actions}}\ action);}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00171\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{CF__TMR32_8h_a2b6b972507a6ad0aa364a4024f2cbdfb}{EF\_TMR32\_setRELOAD}}\ (uint32\_t\ tmr32\_base,\ \textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00178\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{CF__TMR32_8h_a3b643a20832d82a45cf46b18e4100bb5}{EF\_TMR32\_getRELOAD}}\ (uint32\_t\ tmr32\_base);}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00185\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{CF__TMR32_8h_a85d393473b33bd74a65798519b322b95}{EF\_TMR32\_setCMPX}}\ (uint32\_t\ tmr32\_base,\ \textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00192\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{CF__TMR32_8h_a7db9f7a285db0b879dfaef4d98cfbdca}{EF\_TMR32\_getCMPX}}\ (uint32\_t\ tmr32\_base);}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00199\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{CF__TMR32_8h_a1fe62917e80107ffc55ac64d071f161f}{EF\_TMR32\_setCMPY}}\ (uint32\_t\ tmr32\_base,\ \textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00206\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{CF__TMR32_8h_a50616b48ff6f7a191c163badcfbddf54}{EF\_TMR32\_getCMPY}}\ (uint32\_t\ tmr32\_base);}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00213\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{CF__TMR32_8h_a692bbc4af5c80220a3935ec4b1268676}{EF\_TMR32\_getTMR}}\ (uint32\_t\ tmr32\_base);}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00220\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{CF__TMR32_8h_a5e18c1c7fb1332277c7fea24cae7dd91}{EF\_TMR32\_setDeadtime}}\ (uint32\_t\ tmr32\_base,\ \textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{00221\ }
+\DoxyCodeLine{00222\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

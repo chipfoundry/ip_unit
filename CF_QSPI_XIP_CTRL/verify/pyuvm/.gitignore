@@ -1,0 +1,5 @@
+sim/
+__pycache__/
+*.pyc
+*.vcd
+*.fst

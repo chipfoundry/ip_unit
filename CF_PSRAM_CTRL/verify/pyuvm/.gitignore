@@ -1,0 +1,9 @@
+# Cocotb / local sim artifacts (do not commit)
+sim/
+__pycache__/
+*.pyc
+*.vcd
+*.fst
+*.dat
+*.xml
+.pytest_cache/

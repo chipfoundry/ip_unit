@@ -1,0 +1,241 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="struct__CF__TMR32__TYPE__" kind="struct" language="C++" prot="public">
+    <compoundname>_CF_TMR32_TYPE_</compoundname>
+    <includes refid="CF__TMR32__regs_8h" local="no">CF_TMR32_regs.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__CF__TMR32__TYPE___1a4bf7305297d5a1b4d41265a94d5bc872" prot="public" static="no" mutable="no">
+        <type><ref refid="CF__TMR32__regs_8h_1aef00c279597b188e4cdd14d288ddf77a" kindref="member">__R</ref></type>
+        <definition>__R _CF_TMR32_TYPE_::TMR</definition>
+        <argsstring></argsstring>
+        <name>TMR</name>
+        <qualifiedname>_CF_TMR32_TYPE_::TMR</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32_regs.h" line="78" column="17" bodyfile="CF_TMR32_regs.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__CF__TMR32__TYPE___1aa3ae792c2ebe1da3297110ebeb3466ad" prot="public" static="no" mutable="no">
+        <type><ref refid="CF__TMR32__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref></type>
+        <definition>__W _CF_TMR32_TYPE_::RELOAD</definition>
+        <argsstring></argsstring>
+        <name>RELOAD</name>
+        <qualifiedname>_CF_TMR32_TYPE_::RELOAD</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32_regs.h" line="79" column="17" bodyfile="CF_TMR32_regs.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__CF__TMR32__TYPE___1a633ee055130fe09a100217016896b176" prot="public" static="no" mutable="no">
+        <type><ref refid="CF__TMR32__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref></type>
+        <definition>__W _CF_TMR32_TYPE_::PR</definition>
+        <argsstring></argsstring>
+        <name>PR</name>
+        <qualifiedname>_CF_TMR32_TYPE_::PR</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32_regs.h" line="80" column="17" bodyfile="CF_TMR32_regs.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__CF__TMR32__TYPE___1ae43e19e8088a1fefc2dc18440543e33f" prot="public" static="no" mutable="no">
+        <type><ref refid="CF__TMR32__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref></type>
+        <definition>__W _CF_TMR32_TYPE_::CMPX</definition>
+        <argsstring></argsstring>
+        <name>CMPX</name>
+        <qualifiedname>_CF_TMR32_TYPE_::CMPX</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32_regs.h" line="81" column="17" bodyfile="CF_TMR32_regs.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__CF__TMR32__TYPE___1a595ddce5ae660e566f43e8c15585a138" prot="public" static="no" mutable="no">
+        <type><ref refid="CF__TMR32__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref></type>
+        <definition>__W _CF_TMR32_TYPE_::CMPY</definition>
+        <argsstring></argsstring>
+        <name>CMPY</name>
+        <qualifiedname>_CF_TMR32_TYPE_::CMPY</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32_regs.h" line="82" column="17" bodyfile="CF_TMR32_regs.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__CF__TMR32__TYPE___1ac5efd0912e6932652209129716a59140" prot="public" static="no" mutable="no">
+        <type><ref refid="CF__TMR32__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref></type>
+        <definition>__W _CF_TMR32_TYPE_::CTRL</definition>
+        <argsstring></argsstring>
+        <name>CTRL</name>
+        <qualifiedname>_CF_TMR32_TYPE_::CTRL</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32_regs.h" line="83" column="17" bodyfile="CF_TMR32_regs.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__CF__TMR32__TYPE___1a147cc6d93ea18c5b8aa6fd7a6a343d22" prot="public" static="no" mutable="no">
+        <type><ref refid="CF__TMR32__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref></type>
+        <definition>__W _CF_TMR32_TYPE_::CFG</definition>
+        <argsstring></argsstring>
+        <name>CFG</name>
+        <qualifiedname>_CF_TMR32_TYPE_::CFG</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32_regs.h" line="84" column="17" bodyfile="CF_TMR32_regs.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__CF__TMR32__TYPE___1a13319bf36918fad02652cf9636e0f3bd" prot="public" static="no" mutable="no">
+        <type><ref refid="CF__TMR32__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref></type>
+        <definition>__W _CF_TMR32_TYPE_::PWM0CFG</definition>
+        <argsstring></argsstring>
+        <name>PWM0CFG</name>
+        <qualifiedname>_CF_TMR32_TYPE_::PWM0CFG</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32_regs.h" line="85" column="17" bodyfile="CF_TMR32_regs.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__CF__TMR32__TYPE___1ad2c30253ccd1145f45e2b5cf59df8355" prot="public" static="no" mutable="no">
+        <type><ref refid="CF__TMR32__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref></type>
+        <definition>__W _CF_TMR32_TYPE_::PWM1CFG</definition>
+        <argsstring></argsstring>
+        <name>PWM1CFG</name>
+        <qualifiedname>_CF_TMR32_TYPE_::PWM1CFG</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32_regs.h" line="86" column="17" bodyfile="CF_TMR32_regs.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__CF__TMR32__TYPE___1aaf7ab19ccb2ec1d0352cbadb0e75024b" prot="public" static="no" mutable="no">
+        <type><ref refid="CF__TMR32__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref></type>
+        <definition>__W _CF_TMR32_TYPE_::PWMDT</definition>
+        <argsstring></argsstring>
+        <name>PWMDT</name>
+        <qualifiedname>_CF_TMR32_TYPE_::PWMDT</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32_regs.h" line="87" column="17" bodyfile="CF_TMR32_regs.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__CF__TMR32__TYPE___1a047f4e95d1fefc40346908f42f446d09" prot="public" static="no" mutable="no">
+        <type><ref refid="CF__TMR32__regs_8h_1aef00c279597b188e4cdd14d288ddf77a" kindref="member">__R</ref></type>
+        <definition>__R _CF_TMR32_TYPE_::reserved[950]</definition>
+        <argsstring>[950]</argsstring>
+        <name>reserved</name>
+        <qualifiedname>_CF_TMR32_TYPE_::reserved</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32_regs.h" line="88" column="17" bodyfile="CF_TMR32_regs.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__CF__TMR32__TYPE___1a6b4ec960b5cb32cd892b210477fbc7c9" prot="public" static="no" mutable="no">
+        <type><ref refid="CF__TMR32__regs_8h_1a81f369079976a46554fd9798ab035697" kindref="member">__RW</ref></type>
+        <definition>__RW _CF_TMR32_TYPE_::im</definition>
+        <argsstring></argsstring>
+        <name>im</name>
+        <qualifiedname>_CF_TMR32_TYPE_::im</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32_regs.h" line="89" column="17" bodyfile="CF_TMR32_regs.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__CF__TMR32__TYPE___1a7256a3f78f32e653cdb409cc57baa56e" prot="public" static="no" mutable="no">
+        <type><ref refid="CF__TMR32__regs_8h_1aef00c279597b188e4cdd14d288ddf77a" kindref="member">__R</ref></type>
+        <definition>__R _CF_TMR32_TYPE_::mis</definition>
+        <argsstring></argsstring>
+        <name>mis</name>
+        <qualifiedname>_CF_TMR32_TYPE_::mis</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32_regs.h" line="90" column="17" bodyfile="CF_TMR32_regs.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__CF__TMR32__TYPE___1a1e691ee9153bdcb2333287f8ab6beba7" prot="public" static="no" mutable="no">
+        <type><ref refid="CF__TMR32__regs_8h_1aef00c279597b188e4cdd14d288ddf77a" kindref="member">__R</ref></type>
+        <definition>__R _CF_TMR32_TYPE_::ris</definition>
+        <argsstring></argsstring>
+        <name>ris</name>
+        <qualifiedname>_CF_TMR32_TYPE_::ris</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32_regs.h" line="91" column="17" bodyfile="CF_TMR32_regs.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__CF__TMR32__TYPE___1a1f93e0a26343a96ee47812a8591d97e7" prot="public" static="no" mutable="no">
+        <type><ref refid="CF__TMR32__regs_8h_1ad8cfe7014044235a4c8d3239c2597f09" kindref="member">__W</ref></type>
+        <definition>__W _CF_TMR32_TYPE_::icr</definition>
+        <argsstring></argsstring>
+        <name>icr</name>
+        <qualifiedname>_CF_TMR32_TYPE_::icr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32_regs.h" line="92" column="17" bodyfile="CF_TMR32_regs.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="CF_TMR32_regs.h" line="77" column="1" bodyfile="CF_TMR32_regs.h" bodystart="77" bodyend="93"/>
+    <listofallmembers>
+      <member refid="struct__CF__TMR32__TYPE___1a147cc6d93ea18c5b8aa6fd7a6a343d22" prot="public" virt="non-virtual"><scope>_CF_TMR32_TYPE_</scope><name>CFG</name></member>
+      <member refid="struct__CF__TMR32__TYPE___1ae43e19e8088a1fefc2dc18440543e33f" prot="public" virt="non-virtual"><scope>_CF_TMR32_TYPE_</scope><name>CMPX</name></member>
+      <member refid="struct__CF__TMR32__TYPE___1a595ddce5ae660e566f43e8c15585a138" prot="public" virt="non-virtual"><scope>_CF_TMR32_TYPE_</scope><name>CMPY</name></member>
+      <member refid="struct__CF__TMR32__TYPE___1ac5efd0912e6932652209129716a59140" prot="public" virt="non-virtual"><scope>_CF_TMR32_TYPE_</scope><name>CTRL</name></member>
+      <member refid="struct__CF__TMR32__TYPE___1a1f93e0a26343a96ee47812a8591d97e7" prot="public" virt="non-virtual"><scope>_CF_TMR32_TYPE_</scope><name>icr</name></member>
+      <member refid="struct__CF__TMR32__TYPE___1a6b4ec960b5cb32cd892b210477fbc7c9" prot="public" virt="non-virtual"><scope>_CF_TMR32_TYPE_</scope><name>im</name></member>
+      <member refid="struct__CF__TMR32__TYPE___1a7256a3f78f32e653cdb409cc57baa56e" prot="public" virt="non-virtual"><scope>_CF_TMR32_TYPE_</scope><name>mis</name></member>
+      <member refid="struct__CF__TMR32__TYPE___1a633ee055130fe09a100217016896b176" prot="public" virt="non-virtual"><scope>_CF_TMR32_TYPE_</scope><name>PR</name></member>
+      <member refid="struct__CF__TMR32__TYPE___1a13319bf36918fad02652cf9636e0f3bd" prot="public" virt="non-virtual"><scope>_CF_TMR32_TYPE_</scope><name>PWM0CFG</name></member>
+      <member refid="struct__CF__TMR32__TYPE___1ad2c30253ccd1145f45e2b5cf59df8355" prot="public" virt="non-virtual"><scope>_CF_TMR32_TYPE_</scope><name>PWM1CFG</name></member>
+      <member refid="struct__CF__TMR32__TYPE___1aaf7ab19ccb2ec1d0352cbadb0e75024b" prot="public" virt="non-virtual"><scope>_CF_TMR32_TYPE_</scope><name>PWMDT</name></member>
+      <member refid="struct__CF__TMR32__TYPE___1aa3ae792c2ebe1da3297110ebeb3466ad" prot="public" virt="non-virtual"><scope>_CF_TMR32_TYPE_</scope><name>RELOAD</name></member>
+      <member refid="struct__CF__TMR32__TYPE___1a047f4e95d1fefc40346908f42f446d09" prot="public" virt="non-virtual"><scope>_CF_TMR32_TYPE_</scope><name>reserved</name></member>
+      <member refid="struct__CF__TMR32__TYPE___1a1e691ee9153bdcb2333287f8ab6beba7" prot="public" virt="non-virtual"><scope>_CF_TMR32_TYPE_</scope><name>ris</name></member>
+      <member refid="struct__CF__TMR32__TYPE___1a4bf7305297d5a1b4d41265a94d5bc872" prot="public" virt="non-virtual"><scope>_CF_TMR32_TYPE_</scope><name>TMR</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

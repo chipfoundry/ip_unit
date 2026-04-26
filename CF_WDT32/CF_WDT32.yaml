@@ -1,0 +1,103 @@
+---
+info:
+  name: CF_WDT32
+  description: |
+    A simple 32-bit WatchDog Timer (WDT). It can be used to interrupt the CPU to:
+      * Indicate a software malfunction.
+      * Wakeup the CPU after a certain sleep time.
+    
+    The WDT is a simple 32-bit "loadable" down counter which is decremented every system clock cycle. When it reached zero, the counter is loaded with the value stored in the load register and the TO flag is raised.
+
+    The WDT can be enabled/disabled. When it is disabled the counter is loaded with the value in the load register.
+  repo: https://github.com/efabless/CF_WDT32
+  owner: Efabless Corp.
+  license: Apache 2.0
+  author: Efabless Corp.
+  email: ip_admin@efabless.com
+  version: v1.1.0
+  date: 04-02-2025
+  category: digital
+  tags:
+  - peripheral
+  - timer
+  - wdt
+  bus:
+  - generic
+  type: soft
+  status: verified
+  cell_count:
+    - IP: TBD
+    - APB: TBD
+    - AHBL: TBD
+    - WB: TBD
+  width: "0.0"
+  height: "0.0"
+  technology: n/a
+  clock_freq_mhz:
+    - IP: TBD
+    - APB: TBD
+    - AHBL: TBD
+    - WB: TBD
+  digital_supply_voltage: n/a
+  analog_supply_voltage: n/a
+  irq_reg_offset: 0xFF00
+  fifo_reg_offset: 0xFE00
+
+ports:
+- name: WDTMR
+  width: 32
+  direction: output
+  description: The current value of the timer
+- name: WDTLOAD
+  width: 32
+  direction: input
+  description: The value loaded into the timer when it reaches zero
+- name: WDTTO
+  width: 1
+  direction: output
+  description: Time out flag
+- name: WDTEN
+  width: 1
+  direction: input
+  description: watchdog timer enable 
+
+clock:
+  name: clk
+  gated: "yes"
+reset:
+  name: rst_n  
+  level: 0
+
+registers:
+- name: timer
+  size: 32
+  mode: r
+  fifo: no
+  offset: 0
+  bit_access: no 
+  read_port: WDTMR
+  description: The current value of the timer
+- name: load
+  size: 32
+  mode: w
+  fifo: no
+  offset: 4
+  bit_access: no 
+  write_port: WDTLOAD
+  description: The value loaded into the timer when it reaches zero
+- name: control
+  size: 1
+  mode: w
+  fifo: no
+  offset: 8
+  bit_access: no 
+  write_port: WDTEN
+  description: Writing 0 disables the WDT and writing 1 enables it
+  
+
+flags:
+- name: wdtto
+  port: WDTTO
+  description: Time out flag 
+
+

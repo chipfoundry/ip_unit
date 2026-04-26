@@ -1,0 +1,1479 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="CF__TMR32_8c" kind="file" language="C++">
+    <compoundname>CF_TMR32.c</compoundname>
+    <includes refid="CF__TMR32_8h" local="no">CF_TMR32.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>CF_TMR32.c</label>
+        <link refid="CF__TMR32_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>CF_TMR32.h</label>
+        <link refid="CF__TMR32_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>CF_TMR32_regs.h</label>
+        <link refid="CF__TMR32__regs_8h"/>
+      </node>
+      <node id="5">
+        <label>stdbool.h</label>
+      </node>
+      <node id="4">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="CF__TMR32_8c_1aaaba8eb28a93892778a99cac9505ffa7" prot="public" static="no">
+        <name>CF_TMR32_C</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.c" line="7" column="9" bodyfile="CF_TMR32.c" bodystart="7" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="CF__TMR32_8c_1a0b98a7924dfc60cc5ce81fac86757d88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_enable</definition>
+        <argsstring>(uint32_t tmr32_base)</argsstring>
+        <name>CF_TMR32_enable</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <briefdescription>
+<para>enables timer by setting &quot;TE&quot; bit in the CTRL register to 1 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.c" line="11" column="6" bodyfile="CF_TMR32.c" bodystart="11" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8c_1a6f724f1aced4bcfe4b8107c9b6fa6d8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_restart</definition>
+        <argsstring>(uint32_t tmr32_base)</argsstring>
+        <name>CF_TMR32_restart</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <briefdescription>
+<para>enables timer re-start; used in the one-shot mode to restart the timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.c" line="19" column="6" bodyfile="CF_TMR32.c" bodystart="19" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8c_1a09cfca084bb5360d3cf214b2bffc9b2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_PWM0Enable</definition>
+        <argsstring>(uint32_t tmr32_base)</argsstring>
+        <name>CF_TMR32_PWM0Enable</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <briefdescription>
+<para>enables PWM0 by setting &quot;P0E&quot; bit in the CTRL register to 1 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.c" line="27" column="6" bodyfile="CF_TMR32.c" bodystart="27" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8c_1a135d5af1253e1f9f69b08d4e41dd02ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_PWM1Enable</definition>
+        <argsstring>(uint32_t tmr32_base)</argsstring>
+        <name>CF_TMR32_PWM1Enable</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <briefdescription>
+<para>enables PWM1 by setting &quot;P1E&quot; bit in the CTRL register to 1 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.c" line="35" column="6" bodyfile="CF_TMR32.c" bodystart="35" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8c_1a921c61fb121520bc93344f81ad97a0d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_deadtimeEnable</definition>
+        <argsstring>(uint32_t tmr32_base)</argsstring>
+        <name>CF_TMR32_deadtimeEnable</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <briefdescription>
+<para>enables deadtime by setting &quot;DTE&quot; bit in the CTRL register to 1 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.c" line="43" column="6" bodyfile="CF_TMR32.c" bodystart="43" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8c_1a88b4da2266667bc4842db996d5b0b62e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_PWM0Invert</definition>
+        <argsstring>(uint32_t tmr32_base)</argsstring>
+        <name>CF_TMR32_PWM0Invert</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <briefdescription>
+<para>invert PWM0 by setting &quot;P0I&quot; bit in the CTRL register to 1 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.c" line="51" column="6" bodyfile="CF_TMR32.c" bodystart="51" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8c_1ae13e58eda13d7f51a8326241c6f2b3e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_PWM1Invert</definition>
+        <argsstring>(uint32_t tmr32_base)</argsstring>
+        <name>CF_TMR32_PWM1Invert</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <briefdescription>
+<para>invert PWM1 by setting &quot;P1I&quot; bit in the CTRL register to 1 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.c" line="59" column="6" bodyfile="CF_TMR32.c" bodystart="59" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8c_1a20f666530bb16f3862ab0a830fd3fe5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_setUpCount</definition>
+        <argsstring>(uint32_t tmr32_base)</argsstring>
+        <name>CF_TMR32_setUpCount</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <briefdescription>
+<para>set the timer direction to be up counting </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.c" line="67" column="6" bodyfile="CF_TMR32.c" bodystart="67" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8c_1af83cff23e161747858588bb6f87cdfb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_setDownCount</definition>
+        <argsstring>(uint32_t tmr32_base)</argsstring>
+        <name>CF_TMR32_setDownCount</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <briefdescription>
+<para>set the timer direction to be down counting </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.c" line="78" column="6" bodyfile="CF_TMR32.c" bodystart="78" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8c_1a829b564412b2c84a8c66af4147943f29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_setUpDownCount</definition>
+        <argsstring>(uint32_t tmr32_base)</argsstring>
+        <name>CF_TMR32_setUpDownCount</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <briefdescription>
+<para>set the timer direction to be up/down counting </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.c" line="89" column="6" bodyfile="CF_TMR32.c" bodystart="89" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8c_1aeefe8fecbe7223302c773973b21975c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_setPeriodic</definition>
+        <argsstring>(uint32_t tmr32_base)</argsstring>
+        <name>CF_TMR32_setPeriodic</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <briefdescription>
+<para>set the timer to be periodic </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.c" line="100" column="6" bodyfile="CF_TMR32.c" bodystart="100" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8c_1a82340cdad934dca7031edc00c9a2d8df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_setOneShot</definition>
+        <argsstring>(uint32_t tmr32_base)</argsstring>
+        <name>CF_TMR32_setOneShot</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <briefdescription>
+<para>set the timer to be one shot </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.c" line="108" column="6" bodyfile="CF_TMR32.c" bodystart="108" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8c_1a415cfe3592f54f68e3e8a8eaf116a693" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_setPWM0MatchingZeroAction</definition>
+        <argsstring>(uint32_t tmr32_base, enum actions action)</argsstring>
+        <name>CF_TMR32_setPWM0MatchingZeroAction</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref></type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+<para>set the action of PWM0 when the timer matches Zero value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>enum actions could be NONE, LOW, HIGH, or INVERT </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.c" line="116" column="6" bodyfile="CF_TMR32.c" bodystart="116" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8c_1a7542ec9a8e57ac54e00cadee6d0ba62b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_setPWM0MatchingCMPXAction</definition>
+        <argsstring>(uint32_t tmr32_base, enum actions action)</argsstring>
+        <name>CF_TMR32_setPWM0MatchingCMPXAction</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref></type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+<para>set the action of PWM0 when the timer matches CMPX value while up counting </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>enum actions could be NONE, LOW, HIGH, or INVERT </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.c" line="128" column="6" bodyfile="CF_TMR32.c" bodystart="128" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8c_1aa708e75f62acfe3cca5de0201f58be84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_setPWM0MatchingCMPYAction</definition>
+        <argsstring>(uint32_t tmr32_base, enum actions action)</argsstring>
+        <name>CF_TMR32_setPWM0MatchingCMPYAction</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref></type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+<para>set the action of PWM0 when the timer matches CMPY value while up counting </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>enum actions could be NONE, LOW, HIGH, or INVERT </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.c" line="140" column="6" bodyfile="CF_TMR32.c" bodystart="140" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8c_1a7711ca87edfd77457ad7d5246cd01978" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_setPWM0MatchingRELOADAction</definition>
+        <argsstring>(uint32_t tmr32_base, enum actions action)</argsstring>
+        <name>CF_TMR32_setPWM0MatchingRELOADAction</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref></type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+<para>set the action of PWM0 when the timer matches Reload value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>enum actions could be NONE, LOW, HIGH, or INVERT </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.c" line="152" column="6" bodyfile="CF_TMR32.c" bodystart="152" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8c_1ac58bc6263f39d70a88d217956e50fefb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_setPWM0MatchingCMPYDownCountAction</definition>
+        <argsstring>(uint32_t tmr32_base, enum actions action)</argsstring>
+        <name>CF_TMR32_setPWM0MatchingCMPYDownCountAction</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref></type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+<para>set the action of PWM0 when the timer matches CMPX value while down counting </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>enum actions could be NONE, LOW, HIGH, or INVERT </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.c" line="164" column="6" bodyfile="CF_TMR32.c" bodystart="164" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8c_1a66734223ea92dfeae86c7eac582e013e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_setPWM0MatchingCMPXDownCountAction</definition>
+        <argsstring>(uint32_t tmr32_base, enum actions action)</argsstring>
+        <name>CF_TMR32_setPWM0MatchingCMPXDownCountAction</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref></type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+<para>set the action of PWM0 when the timer matches CMPY value while down counting </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>enum actions could be NONE, LOW, HIGH, or INVERT </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.c" line="176" column="6" bodyfile="CF_TMR32.c" bodystart="176" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8c_1aa9af6b2ce5b6e8828408c845345b0d44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_setPWM1MatchingZeroAction</definition>
+        <argsstring>(uint32_t tmr32_base, enum actions action)</argsstring>
+        <name>CF_TMR32_setPWM1MatchingZeroAction</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref></type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+<para>set the action of PWM1 when the timer matches Zero value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>enum actions could be NONE, LOW, HIGH, or INVERT </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.c" line="188" column="6" bodyfile="CF_TMR32.c" bodystart="188" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8c_1a96664e404ae630c57804cd9a3776f8cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_setPWM1MatchingCMPXAction</definition>
+        <argsstring>(uint32_t tmr32_base, enum actions action)</argsstring>
+        <name>CF_TMR32_setPWM1MatchingCMPXAction</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref></type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+<para>set the action of PWM1 when the timer matches CMPY value while up counting </para>
+        </briefdescription>
+        <detaileddescription>
+<para>set the action of PWM1 when the timer matches CMPX value while up counting</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>enum actions could be NONE, LOW, HIGH, or INVERT </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.c" line="200" column="6" bodyfile="CF_TMR32.c" bodystart="200" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8c_1a72b3f4034de4423ccf5ca640e0a26706" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_setPWM1MatchingCMPYAction</definition>
+        <argsstring>(uint32_t tmr32_base, enum actions action)</argsstring>
+        <name>CF_TMR32_setPWM1MatchingCMPYAction</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref></type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.c" line="212" column="6" bodyfile="CF_TMR32.c" bodystart="212" bodyend="222"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8c_1aa9393a186a487ca696ac55f78e54ae10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_setPWM1MatchingRELOADAction</definition>
+        <argsstring>(uint32_t tmr32_base, enum actions action)</argsstring>
+        <name>CF_TMR32_setPWM1MatchingRELOADAction</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref></type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+<para>set the action of PWM1 when the timer matches Reload value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>enum actions could be NONE, LOW, HIGH, or INVERT </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.c" line="224" column="6" bodyfile="CF_TMR32.c" bodystart="224" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8c_1a3db62bb1a46497d90950a630bdcd3d9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_setPWM1MatchingCMPYDownCountAction</definition>
+        <argsstring>(uint32_t tmr32_base, enum actions action)</argsstring>
+        <name>CF_TMR32_setPWM1MatchingCMPYDownCountAction</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref></type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+<para>set the action of PWM1 when the timer matches CMPX value while down counting </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>enum actions could be NONE, LOW, HIGH, or INVERT </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.c" line="236" column="6" bodyfile="CF_TMR32.c" bodystart="236" bodyend="246"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8c_1a3e2ca846ea20ff2262b8617f03b41e32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_setPWM1MatchingCMPXDownCountAction</definition>
+        <argsstring>(uint32_t tmr32_base, enum actions action)</argsstring>
+        <name>CF_TMR32_setPWM1MatchingCMPXDownCountAction</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <param>
+          <type>enum <ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref></type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+<para>set the action of PWM1 when the timer matches CMPY value while down counting </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>enum actions could be NONE, LOW, HIGH, or INVERT </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.c" line="248" column="6" bodyfile="CF_TMR32.c" bodystart="248" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8c_1a2b6b972507a6ad0aa364a4024f2cbdfb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_setRELOAD</definition>
+        <argsstring>(uint32_t tmr32_base, int value)</argsstring>
+        <name>CF_TMR32_setRELOAD</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>set the timer reload value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>timer reload value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.c" line="260" column="6" bodyfile="CF_TMR32.c" bodystart="260" bodyend="266"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8c_1a3b643a20832d82a45cf46b18e4100bb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CF_TMR32_getRELOAD</definition>
+        <argsstring>(uint32_t tmr32_base)</argsstring>
+        <name>CF_TMR32_getRELOAD</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <briefdescription>
+<para>get the timer reload value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>reload register value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.c" line="268" column="5" bodyfile="CF_TMR32.c" bodystart="268" bodyend="274"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8c_1a85d393473b33bd74a65798519b322b95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_setCMPX</definition>
+        <argsstring>(uint32_t tmr32_base, int value)</argsstring>
+        <name>CF_TMR32_setCMPX</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>set the CMPX register value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CMPX value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.c" line="276" column="6" bodyfile="CF_TMR32.c" bodystart="276" bodyend="282"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8c_1a7db9f7a285db0b879dfaef4d98cfbdca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CF_TMR32_getCMPX</definition>
+        <argsstring>(uint32_t tmr32_base)</argsstring>
+        <name>CF_TMR32_getCMPX</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <briefdescription>
+<para>get the CMPX register value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>CMPX register value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.c" line="284" column="5" bodyfile="CF_TMR32.c" bodystart="284" bodyend="290"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8c_1a1fe62917e80107ffc55ac64d071f161f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_setCMPY</definition>
+        <argsstring>(uint32_t tmr32_base, int value)</argsstring>
+        <name>CF_TMR32_setCMPY</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>set the CMPY register value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CMPY value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.c" line="292" column="6" bodyfile="CF_TMR32.c" bodystart="292" bodyend="298"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8c_1a50616b48ff6f7a191c163badcfbddf54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CF_TMR32_getCMPY</definition>
+        <argsstring>(uint32_t tmr32_base)</argsstring>
+        <name>CF_TMR32_getCMPY</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <briefdescription>
+<para>get the CMPY register value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>CMPY register value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.c" line="300" column="5" bodyfile="CF_TMR32.c" bodystart="300" bodyend="306"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8c_1a692bbc4af5c80220a3935ec4b1268676" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CF_TMR32_getTMR</definition>
+        <argsstring>(uint32_t tmr32_base)</argsstring>
+        <name>CF_TMR32_getTMR</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <briefdescription>
+<para>get the current value of the timer </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>current timer value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.c" line="308" column="5" bodyfile="CF_TMR32.c" bodystart="308" bodyend="314"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8c_1a5e18c1c7fb1332277c7fea24cae7dd91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CF_TMR32_setDeadtime</definition>
+        <argsstring>(uint32_t tmr32_base, int value)</argsstring>
+        <name>CF_TMR32_setDeadtime</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>set the timer deadtime register value </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tmr32_base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base memory address of TMR32 registers. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>deadtime register value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.c" line="316" column="6" bodyfile="CF_TMR32.c" bodystart="316" bodyend="322"/>
+      </memberdef>
+      <memberdef kind="function" id="CF__TMR32_8c_1af6bca3ca58e7c717aad4777f1b0ddd7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CF_TMR32_getDeadtime</definition>
+        <argsstring>(uint32_t tmr32_base)</argsstring>
+        <name>CF_TMR32_getDeadtime</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>tmr32_base</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CF_TMR32.c" line="324" column="5" bodyfile="CF_TMR32.c" bodystart="324" bodyend="330"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CF_TMR32_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CF_TMR32_C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="CF__TMR32_8h" kindref="compound">CF_TMR32.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8c_1a0b98a7924dfc60cc5ce81fac86757d88" kindref="member">CF_TMR32_enable</ref>(uint32_t<sp/>tmr32_base){</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*<sp/>tmr32<sp/>=<sp/>(<ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*)tmr32_base;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>enable<sp/>bit<sp/>to<sp/>1<sp/>at<sp/>the<sp/>specified<sp/>offset</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1ac5efd0912e6932652209129716a59140" kindref="member">CTRL</ref><sp/>|=<sp/>(1<sp/>&lt;&lt;<sp/><ref refid="CF__TMR32__regs_8h_1a8a61f271d2a3622f6e8fa62e7006e3fd" kindref="member">CF_TMR32_CTRL_REG_TE_BIT</ref>);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8c_1a6f724f1aced4bcfe4b8107c9b6fa6d8a" kindref="member">CF_TMR32_restart</ref>(uint32_t<sp/>tmr32_base){</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*<sp/>tmr32<sp/>=<sp/>(<ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*)tmr32_base;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>enable<sp/>bit<sp/>to<sp/>1<sp/>at<sp/>the<sp/>specified<sp/>offset</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1ac5efd0912e6932652209129716a59140" kindref="member">CTRL</ref><sp/>|=<sp/>(1<sp/>&lt;&lt;<sp/><ref refid="CF__TMR32__regs_8h_1ac4382558d6b66fa07908ff7c161587ba" kindref="member">CF_TMR32_CTRL_REG_TS_BIT</ref>);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8c_1a09cfca084bb5360d3cf214b2bffc9b2e" kindref="member">CF_TMR32_PWM0Enable</ref>(uint32_t<sp/>tmr32_base){</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*<sp/>tmr32<sp/>=<sp/>(<ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*)tmr32_base;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>enable<sp/>bit<sp/>to<sp/>1<sp/>at<sp/>the<sp/>specified<sp/>offset</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1ac5efd0912e6932652209129716a59140" kindref="member">CTRL</ref><sp/>|=<sp/>(1<sp/>&lt;&lt;<sp/><ref refid="CF__TMR32__regs_8h_1ae8ddbc3cb210812358d7e57fb0dba958" kindref="member">CF_TMR32_CTRL_REG_P0E_BIT</ref>);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8c_1a135d5af1253e1f9f69b08d4e41dd02ea" kindref="member">CF_TMR32_PWM1Enable</ref>(uint32_t<sp/>tmr32_base){</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*<sp/>tmr32<sp/>=<sp/>(<ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*)tmr32_base;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>enable<sp/>bit<sp/>to<sp/>1<sp/>at<sp/>the<sp/>specified<sp/>offset</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1ac5efd0912e6932652209129716a59140" kindref="member">CTRL</ref><sp/>|=<sp/>(1<sp/>&lt;&lt;<sp/><ref refid="CF__TMR32__regs_8h_1ab987c15d464b166484e77573816bc2dc" kindref="member">CF_TMR32_CTRL_REG_P1E_BIT</ref>);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8c_1a921c61fb121520bc93344f81ad97a0d7" kindref="member">CF_TMR32_deadtimeEnable</ref>(uint32_t<sp/>tmr32_base){</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*<sp/>tmr32<sp/>=<sp/>(<ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*)tmr32_base;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>enable<sp/>bit<sp/>to<sp/>1<sp/>at<sp/>the<sp/>specified<sp/>offset</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1ac5efd0912e6932652209129716a59140" kindref="member">CTRL</ref><sp/>|=<sp/>(1<sp/>&lt;&lt;<sp/><ref refid="CF__TMR32__regs_8h_1aa5c3cd2af8288638c7d995b87d7d3a73" kindref="member">CF_TMR32_CTRL_REG_DTE_BIT</ref>);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8c_1a88b4da2266667bc4842db996d5b0b62e" kindref="member">CF_TMR32_PWM0Invert</ref>(uint32_t<sp/>tmr32_base){</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*<sp/>tmr32<sp/>=<sp/>(<ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*)tmr32_base;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>enable<sp/>bit<sp/>to<sp/>1<sp/>at<sp/>the<sp/>specified<sp/>offset</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1ac5efd0912e6932652209129716a59140" kindref="member">CTRL</ref><sp/>|=<sp/>(1<sp/>&lt;&lt;<sp/><ref refid="CF__TMR32__regs_8h_1a7957a0e0fa4562b16ab214bbb9b90a51" kindref="member">CF_TMR32_CTRL_REG_PI0_BIT</ref>);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8c_1ae13e58eda13d7f51a8326241c6f2b3e1" kindref="member">CF_TMR32_PWM1Invert</ref>(uint32_t<sp/>tmr32_base){</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*<sp/>tmr32<sp/>=<sp/>(<ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*)tmr32_base;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>enable<sp/>bit<sp/>to<sp/>1<sp/>at<sp/>the<sp/>specified<sp/>offset</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1ac5efd0912e6932652209129716a59140" kindref="member">CTRL</ref><sp/>|=<sp/>(1<sp/>&lt;&lt;<sp/><ref refid="CF__TMR32__regs_8h_1a38181264521325aa7b76f3b9f2d2d538" kindref="member">CF_TMR32_CTRL_REG_PI1_BIT</ref>);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8c_1a20f666530bb16f3862ab0a830fd3fe5e" kindref="member">CF_TMR32_setUpCount</ref>(uint32_t<sp/>tmr32_base){</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*<sp/>tmr32<sp/>=<sp/>(<ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*)tmr32_base;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Clear<sp/>the<sp/>field<sp/>bits<sp/>in<sp/>the<sp/>register<sp/>using<sp/>the<sp/>defined<sp/>mask</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1a147cc6d93ea18c5b8aa6fd7a6a343d22" kindref="member">CFG</ref><sp/>&amp;=<sp/>~CF_TMR32_CFG_REG_DIR_MASK;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>bits<sp/>with<sp/>the<sp/>given<sp/>value<sp/>at<sp/>the<sp/>defined<sp/>offset</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1a147cc6d93ea18c5b8aa6fd7a6a343d22" kindref="member">CFG</ref><sp/>|=<sp/>((0b10<sp/>&lt;&lt;<sp/><ref refid="CF__TMR32__regs_8h_1a67fc12a82dc5c18837c124677450ec42" kindref="member">CF_TMR32_CFG_REG_DIR_BIT</ref>)<sp/>&amp;<sp/><ref refid="CF__TMR32__regs_8h_1a2eb6fdee86a19ed2741841b3aeb20190" kindref="member">CF_TMR32_CFG_REG_DIR_MASK</ref>);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8c_1af83cff23e161747858588bb6f87cdfb4" kindref="member">CF_TMR32_setDownCount</ref>(uint32_t<sp/>tmr32_base){</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*<sp/>tmr32<sp/>=<sp/>(<ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*)tmr32_base;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Clear<sp/>the<sp/>field<sp/>bits<sp/>in<sp/>the<sp/>register<sp/>using<sp/>the<sp/>defined<sp/>mask</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1a147cc6d93ea18c5b8aa6fd7a6a343d22" kindref="member">CFG</ref><sp/>&amp;=<sp/>~CF_TMR32_CFG_REG_DIR_MASK;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>bits<sp/>with<sp/>the<sp/>given<sp/>value<sp/>at<sp/>the<sp/>defined<sp/>offset</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1a147cc6d93ea18c5b8aa6fd7a6a343d22" kindref="member">CFG</ref><sp/>|=<sp/>((0b01<sp/>&lt;&lt;<sp/><ref refid="CF__TMR32__regs_8h_1a67fc12a82dc5c18837c124677450ec42" kindref="member">CF_TMR32_CFG_REG_DIR_BIT</ref>)<sp/>&amp;<sp/><ref refid="CF__TMR32__regs_8h_1a2eb6fdee86a19ed2741841b3aeb20190" kindref="member">CF_TMR32_CFG_REG_DIR_MASK</ref>);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8c_1a829b564412b2c84a8c66af4147943f29" kindref="member">CF_TMR32_setUpDownCount</ref>(uint32_t<sp/>tmr32_base){</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*<sp/>tmr32<sp/>=<sp/>(<ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*)tmr32_base;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Clear<sp/>the<sp/>field<sp/>bits<sp/>in<sp/>the<sp/>register<sp/>using<sp/>the<sp/>defined<sp/>mask</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1a147cc6d93ea18c5b8aa6fd7a6a343d22" kindref="member">CFG</ref><sp/>&amp;=<sp/>~CF_TMR32_CFG_REG_DIR_MASK;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>bits<sp/>with<sp/>the<sp/>given<sp/>value<sp/>at<sp/>the<sp/>defined<sp/>offset</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1a147cc6d93ea18c5b8aa6fd7a6a343d22" kindref="member">CFG</ref><sp/>|=<sp/>((0b11<sp/>&lt;&lt;<sp/><ref refid="CF__TMR32__regs_8h_1a67fc12a82dc5c18837c124677450ec42" kindref="member">CF_TMR32_CFG_REG_DIR_BIT</ref>)<sp/>&amp;<sp/><ref refid="CF__TMR32__regs_8h_1a2eb6fdee86a19ed2741841b3aeb20190" kindref="member">CF_TMR32_CFG_REG_DIR_MASK</ref>);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8c_1aeefe8fecbe7223302c773973b21975c1" kindref="member">CF_TMR32_setPeriodic</ref>(uint32_t<sp/>tmr32_base){</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*<sp/>tmr32<sp/>=<sp/>(<ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*)tmr32_base;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>enable<sp/>bit<sp/>to<sp/>1<sp/>at<sp/>the<sp/>specified<sp/>offset</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1ac5efd0912e6932652209129716a59140" kindref="member">CTRL</ref><sp/>|=<sp/>(1<sp/>&lt;&lt;<sp/><ref refid="CF__TMR32__regs_8h_1ac18d10835a40d4cede7aac865359e616" kindref="member">CF_TMR32_CFG_REG_P_BIT</ref>);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8c_1a82340cdad934dca7031edc00c9a2d8df" kindref="member">CF_TMR32_setOneShot</ref>(uint32_t<sp/>tmr32_base){</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*<sp/>tmr32<sp/>=<sp/>(<ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*)tmr32_base;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Clear<sp/>the<sp/>enable<sp/>bit<sp/>using<sp/>the<sp/>specified<sp/><sp/>mask</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1ac5efd0912e6932652209129716a59140" kindref="member">CTRL</ref><sp/>&amp;=<sp/>~CF_TMR32_CFG_REG_P_BIT;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8c_1a415cfe3592f54f68e3e8a8eaf116a693" kindref="member">CF_TMR32_setPWM0MatchingZeroAction</ref>(uint32_t<sp/>tmr32_base,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref><sp/>action){</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*<sp/>tmr32<sp/>=<sp/>(<ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*)tmr32_base;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Clear<sp/>the<sp/>field<sp/>bits<sp/>in<sp/>the<sp/>register<sp/>using<sp/>the<sp/>defined<sp/>mask</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1a13319bf36918fad02652cf9636e0f3bd" kindref="member">PWM0CFG</ref><sp/>&amp;=<sp/>~CF_TMR32_PWM0CFG_REG_E0_MASK;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>bits<sp/>with<sp/>the<sp/>given<sp/>value<sp/>at<sp/>the<sp/>defined<sp/>offset</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1a13319bf36918fad02652cf9636e0f3bd" kindref="member">PWM0CFG</ref><sp/>|=<sp/>((action<sp/>&lt;&lt;<sp/><ref refid="CF__TMR32__regs_8h_1a70b01f1d7aaa6ec37fec28ffe7d49b1b" kindref="member">CF_TMR32_PWM0CFG_REG_E0_BIT</ref>)<sp/>&amp;<sp/><ref refid="CF__TMR32__regs_8h_1a3768e7c0ecd54b880b961fd61ea25b54" kindref="member">CF_TMR32_PWM0CFG_REG_E0_MASK</ref>);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8c_1a7542ec9a8e57ac54e00cadee6d0ba62b" kindref="member">CF_TMR32_setPWM0MatchingCMPXAction</ref>(uint32_t<sp/>tmr32_base,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref><sp/>action){</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*<sp/>tmr32<sp/>=<sp/>(<ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*)tmr32_base;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Clear<sp/>the<sp/>field<sp/>bits<sp/>in<sp/>the<sp/>register<sp/>using<sp/>the<sp/>defined<sp/>mask</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1a13319bf36918fad02652cf9636e0f3bd" kindref="member">PWM0CFG</ref><sp/>&amp;=<sp/>~CF_TMR32_PWM0CFG_REG_E1_MASK;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>bits<sp/>with<sp/>the<sp/>given<sp/>value<sp/>at<sp/>the<sp/>defined<sp/>offset</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1a13319bf36918fad02652cf9636e0f3bd" kindref="member">PWM0CFG</ref><sp/>|=<sp/>((action<sp/>&lt;&lt;<sp/><ref refid="CF__TMR32__regs_8h_1a9efa1187d55b12622af966b65dde6406" kindref="member">CF_TMR32_PWM0CFG_REG_E1_BIT</ref>)<sp/>&amp;<sp/><ref refid="CF__TMR32__regs_8h_1ad17004ea36383e41d59b3645f119d6ee" kindref="member">CF_TMR32_PWM0CFG_REG_E1_MASK</ref>);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8c_1aa708e75f62acfe3cca5de0201f58be84" kindref="member">CF_TMR32_setPWM0MatchingCMPYAction</ref>(uint32_t<sp/>tmr32_base,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref><sp/>action){</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*<sp/>tmr32<sp/>=<sp/>(<ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*)tmr32_base;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Clear<sp/>the<sp/>field<sp/>bits<sp/>in<sp/>the<sp/>register<sp/>using<sp/>the<sp/>defined<sp/>mask</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1a13319bf36918fad02652cf9636e0f3bd" kindref="member">PWM0CFG</ref><sp/>&amp;=<sp/>~CF_TMR32_PWM0CFG_REG_E2_MASK;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>bits<sp/>with<sp/>the<sp/>given<sp/>value<sp/>at<sp/>the<sp/>defined<sp/>offset</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1a13319bf36918fad02652cf9636e0f3bd" kindref="member">PWM0CFG</ref><sp/>|=<sp/>((action<sp/>&lt;&lt;<sp/><ref refid="CF__TMR32__regs_8h_1a37caffe2875fd64dcd7f157a4acbc24f" kindref="member">CF_TMR32_PWM0CFG_REG_E2_BIT</ref>)<sp/>&amp;<sp/><ref refid="CF__TMR32__regs_8h_1a0963671f2d64b6a8d44cb53bd172b9f6" kindref="member">CF_TMR32_PWM0CFG_REG_E2_MASK</ref>);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8c_1a7711ca87edfd77457ad7d5246cd01978" kindref="member">CF_TMR32_setPWM0MatchingRELOADAction</ref>(uint32_t<sp/>tmr32_base,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref><sp/>action){</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*<sp/>tmr32<sp/>=<sp/>(<ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*)tmr32_base;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Clear<sp/>the<sp/>field<sp/>bits<sp/>in<sp/>the<sp/>register<sp/>using<sp/>the<sp/>defined<sp/>mask</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1a13319bf36918fad02652cf9636e0f3bd" kindref="member">PWM0CFG</ref><sp/>&amp;=<sp/>~CF_TMR32_PWM0CFG_REG_E3_MASK;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>bits<sp/>with<sp/>the<sp/>given<sp/>value<sp/>at<sp/>the<sp/>defined<sp/>offset</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1a13319bf36918fad02652cf9636e0f3bd" kindref="member">PWM0CFG</ref><sp/>|=<sp/>((action<sp/>&lt;&lt;<sp/><ref refid="CF__TMR32__regs_8h_1a842281bd48fd9663d6b6dfccad7dd13c" kindref="member">CF_TMR32_PWM0CFG_REG_E3_BIT</ref>)<sp/>&amp;<sp/><ref refid="CF__TMR32__regs_8h_1a167772b4b88bf0d45a7fe767e9b400ab" kindref="member">CF_TMR32_PWM0CFG_REG_E3_MASK</ref>);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8c_1ac58bc6263f39d70a88d217956e50fefb" kindref="member">CF_TMR32_setPWM0MatchingCMPYDownCountAction</ref>(uint32_t<sp/>tmr32_base,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref><sp/>action){</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*<sp/>tmr32<sp/>=<sp/>(<ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*)tmr32_base;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Clear<sp/>the<sp/>field<sp/>bits<sp/>in<sp/>the<sp/>register<sp/>using<sp/>the<sp/>defined<sp/>mask</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1a13319bf36918fad02652cf9636e0f3bd" kindref="member">PWM0CFG</ref><sp/>&amp;=<sp/>~CF_TMR32_PWM0CFG_REG_E4_MASK;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>bits<sp/>with<sp/>the<sp/>given<sp/>value<sp/>at<sp/>the<sp/>defined<sp/>offset</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1a13319bf36918fad02652cf9636e0f3bd" kindref="member">PWM0CFG</ref><sp/>|=<sp/>((action<sp/>&lt;&lt;<sp/><ref refid="CF__TMR32__regs_8h_1aa2266ca94b25cb878b7ddc8272899a87" kindref="member">CF_TMR32_PWM0CFG_REG_E4_BIT</ref>)<sp/>&amp;<sp/><ref refid="CF__TMR32__regs_8h_1ae48dbb0d2622aa39b8c0ad818d3e65bf" kindref="member">CF_TMR32_PWM0CFG_REG_E4_MASK</ref>);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8c_1a66734223ea92dfeae86c7eac582e013e" kindref="member">CF_TMR32_setPWM0MatchingCMPXDownCountAction</ref>(uint32_t<sp/>tmr32_base,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref><sp/>action){</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*<sp/>tmr32<sp/>=<sp/>(<ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*)tmr32_base;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Clear<sp/>the<sp/>field<sp/>bits<sp/>in<sp/>the<sp/>register<sp/>using<sp/>the<sp/>defined<sp/>mask</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1a13319bf36918fad02652cf9636e0f3bd" kindref="member">PWM0CFG</ref><sp/>&amp;=<sp/>~CF_TMR32_PWM0CFG_REG_E5_MASK;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>bits<sp/>with<sp/>the<sp/>given<sp/>value<sp/>at<sp/>the<sp/>defined<sp/>offset</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1a13319bf36918fad02652cf9636e0f3bd" kindref="member">PWM0CFG</ref><sp/>|=<sp/>((action<sp/>&lt;&lt;<sp/><ref refid="CF__TMR32__regs_8h_1a57abb4bded0aadcfe612efd462d72361" kindref="member">CF_TMR32_PWM0CFG_REG_E5_BIT</ref>)<sp/>&amp;<sp/><ref refid="CF__TMR32__regs_8h_1ae2a5aeaa91252fa8b4356e820ce64aeb" kindref="member">CF_TMR32_PWM0CFG_REG_E5_MASK</ref>);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8c_1aa9af6b2ce5b6e8828408c845345b0d44" kindref="member">CF_TMR32_setPWM1MatchingZeroAction</ref>(uint32_t<sp/>tmr32_base,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref><sp/>action){</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*<sp/>tmr32<sp/>=<sp/>(<ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*)tmr32_base;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Clear<sp/>the<sp/>field<sp/>bits<sp/>in<sp/>the<sp/>register<sp/>using<sp/>the<sp/>defined<sp/>mask</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1ad2c30253ccd1145f45e2b5cf59df8355" kindref="member">PWM1CFG</ref><sp/>&amp;=<sp/>~CF_TMR32_PWM1CFG_REG_E0_MASK;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>bits<sp/>with<sp/>the<sp/>given<sp/>value<sp/>at<sp/>the<sp/>defined<sp/>offset</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1ad2c30253ccd1145f45e2b5cf59df8355" kindref="member">PWM1CFG</ref><sp/>|=<sp/>((action<sp/>&lt;&lt;<sp/><ref refid="CF__TMR32__regs_8h_1ad50501bb2385f55df3c6d9b5ef78c5bf" kindref="member">CF_TMR32_PWM1CFG_REG_E0_BIT</ref>)<sp/>&amp;<sp/><ref refid="CF__TMR32__regs_8h_1aa56b6cd1ab68c2df511c56afc4af8ef2" kindref="member">CF_TMR32_PWM1CFG_REG_E0_MASK</ref>);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8c_1a96664e404ae630c57804cd9a3776f8cb" kindref="member">CF_TMR32_setPWM1MatchingCMPXAction</ref>(uint32_t<sp/>tmr32_base,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref><sp/>action){</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*<sp/>tmr32<sp/>=<sp/>(<ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*)tmr32_base;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Clear<sp/>the<sp/>field<sp/>bits<sp/>in<sp/>the<sp/>register<sp/>using<sp/>the<sp/>defined<sp/>mask</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1ad2c30253ccd1145f45e2b5cf59df8355" kindref="member">PWM1CFG</ref><sp/>&amp;=<sp/>~CF_TMR32_PWM1CFG_REG_E1_MASK;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>bits<sp/>with<sp/>the<sp/>given<sp/>value<sp/>at<sp/>the<sp/>defined<sp/>offset</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1ad2c30253ccd1145f45e2b5cf59df8355" kindref="member">PWM1CFG</ref><sp/>|=<sp/>((action<sp/>&lt;&lt;<sp/><ref refid="CF__TMR32__regs_8h_1a1d7f9741a38207677956aa34bef1b694" kindref="member">CF_TMR32_PWM1CFG_REG_E1_BIT</ref>)<sp/>&amp;<sp/><ref refid="CF__TMR32__regs_8h_1a5c82d8bdf4bf317da8db5a63a618a10e" kindref="member">CF_TMR32_PWM1CFG_REG_E1_MASK</ref>);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8c_1a72b3f4034de4423ccf5ca640e0a26706" kindref="member">CF_TMR32_setPWM1MatchingCMPYAction</ref>(uint32_t<sp/>tmr32_base,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref><sp/>action){</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*<sp/>tmr32<sp/>=<sp/>(<ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*)tmr32_base;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Clear<sp/>the<sp/>field<sp/>bits<sp/>in<sp/>the<sp/>register<sp/>using<sp/>the<sp/>defined<sp/>mask</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1ad2c30253ccd1145f45e2b5cf59df8355" kindref="member">PWM1CFG</ref><sp/>&amp;=<sp/>~CF_TMR32_PWM1CFG_REG_E2_MASK;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>bits<sp/>with<sp/>the<sp/>given<sp/>value<sp/>at<sp/>the<sp/>defined<sp/>offset</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1ad2c30253ccd1145f45e2b5cf59df8355" kindref="member">PWM1CFG</ref><sp/>|=<sp/>((action<sp/>&lt;&lt;<sp/><ref refid="CF__TMR32__regs_8h_1a6d3d5ecb2fcfd7a56bd1735807b0c9d6" kindref="member">CF_TMR32_PWM1CFG_REG_E2_BIT</ref>)<sp/>&amp;<sp/><ref refid="CF__TMR32__regs_8h_1a50e0462c7485c437c3da98cb8a0a4b4e" kindref="member">CF_TMR32_PWM1CFG_REG_E2_MASK</ref>);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8c_1aa9393a186a487ca696ac55f78e54ae10" kindref="member">CF_TMR32_setPWM1MatchingRELOADAction</ref>(uint32_t<sp/>tmr32_base,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref><sp/>action){</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*<sp/>tmr32<sp/>=<sp/>(<ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*)tmr32_base;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Clear<sp/>the<sp/>field<sp/>bits<sp/>in<sp/>the<sp/>register<sp/>using<sp/>the<sp/>defined<sp/>mask</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1ad2c30253ccd1145f45e2b5cf59df8355" kindref="member">PWM1CFG</ref><sp/>&amp;=<sp/>~CF_TMR32_PWM1CFG_REG_E3_MASK;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>bits<sp/>with<sp/>the<sp/>given<sp/>value<sp/>at<sp/>the<sp/>defined<sp/>offset</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1ad2c30253ccd1145f45e2b5cf59df8355" kindref="member">PWM1CFG</ref><sp/>|=<sp/>((action<sp/>&lt;&lt;<sp/><ref refid="CF__TMR32__regs_8h_1a63a36d6cefea911169aaa319a7495917" kindref="member">CF_TMR32_PWM1CFG_REG_E3_BIT</ref>)<sp/>&amp;<sp/><ref refid="CF__TMR32__regs_8h_1a7adadee6794981e340d240376a3dab09" kindref="member">CF_TMR32_PWM1CFG_REG_E3_MASK</ref>);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8c_1a3db62bb1a46497d90950a630bdcd3d9a" kindref="member">CF_TMR32_setPWM1MatchingCMPYDownCountAction</ref>(uint32_t<sp/>tmr32_base,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref><sp/>action){</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*<sp/>tmr32<sp/>=<sp/>(<ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*)tmr32_base;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Clear<sp/>the<sp/>field<sp/>bits<sp/>in<sp/>the<sp/>register<sp/>using<sp/>the<sp/>defined<sp/>mask</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1ad2c30253ccd1145f45e2b5cf59df8355" kindref="member">PWM1CFG</ref><sp/>&amp;=<sp/>~CF_TMR32_PWM1CFG_REG_E4_MASK;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>bits<sp/>with<sp/>the<sp/>given<sp/>value<sp/>at<sp/>the<sp/>defined<sp/>offset</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1ad2c30253ccd1145f45e2b5cf59df8355" kindref="member">PWM1CFG</ref><sp/>|=<sp/>((action<sp/>&lt;&lt;<sp/><ref refid="CF__TMR32__regs_8h_1a85e5a9e45f39b701da242f805e12fb09" kindref="member">CF_TMR32_PWM1CFG_REG_E4_BIT</ref>)<sp/>&amp;<sp/><ref refid="CF__TMR32__regs_8h_1a6c15c32ec4373135afb784bbd6f45bf6" kindref="member">CF_TMR32_PWM1CFG_REG_E4_MASK</ref>);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8c_1a3e2ca846ea20ff2262b8617f03b41e32" kindref="member">CF_TMR32_setPWM1MatchingCMPXDownCountAction</ref>(uint32_t<sp/>tmr32_base,<sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8h_1af806efc6052edbc741683ec893bb2fe1" kindref="member">actions</ref><sp/>action){</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*<sp/>tmr32<sp/>=<sp/>(<ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*)tmr32_base;</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Clear<sp/>the<sp/>field<sp/>bits<sp/>in<sp/>the<sp/>register<sp/>using<sp/>the<sp/>defined<sp/>mask</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1ad2c30253ccd1145f45e2b5cf59df8355" kindref="member">PWM1CFG</ref><sp/>&amp;=<sp/>~CF_TMR32_PWM1CFG_REG_E5_MASK;</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>bits<sp/>with<sp/>the<sp/>given<sp/>value<sp/>at<sp/>the<sp/>defined<sp/>offset</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1ad2c30253ccd1145f45e2b5cf59df8355" kindref="member">PWM1CFG</ref><sp/>|=<sp/>((action<sp/>&lt;&lt;<sp/><ref refid="CF__TMR32__regs_8h_1a5ac881719f60aef3c1bc22115ecdcded" kindref="member">CF_TMR32_PWM1CFG_REG_E5_BIT</ref>)<sp/>&amp;<sp/><ref refid="CF__TMR32__regs_8h_1a51dfc83d58f14bf54c6ad56e063d8b44" kindref="member">CF_TMR32_PWM1CFG_REG_E5_MASK</ref>);</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8c_1a2b6b972507a6ad0aa364a4024f2cbdfb" kindref="member">CF_TMR32_setRELOAD</ref><sp/>(uint32_t<sp/>tmr32_base,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value){</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*<sp/>tmr32<sp/>=<sp/>(<ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*)tmr32_base;</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1aa3ae792c2ebe1da3297110ebeb3466ad" kindref="member">RELOAD</ref><sp/>=<sp/>value;</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8c_1a3b643a20832d82a45cf46b18e4100bb5" kindref="member">CF_TMR32_getRELOAD</ref><sp/>(uint32_t<sp/>tmr32_base){</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*<sp/>tmr32<sp/>=<sp/>(<ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*)tmr32_base;</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1aa3ae792c2ebe1da3297110ebeb3466ad" kindref="member">RELOAD</ref>);</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8c_1a85d393473b33bd74a65798519b322b95" kindref="member">CF_TMR32_setCMPX</ref><sp/>(uint32_t<sp/>tmr32_base,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value){</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*<sp/>tmr32<sp/>=<sp/>(<ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*)tmr32_base;</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1ae43e19e8088a1fefc2dc18440543e33f" kindref="member">CMPX</ref><sp/>=<sp/>value;</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8c_1a7db9f7a285db0b879dfaef4d98cfbdca" kindref="member">CF_TMR32_getCMPX</ref><sp/>(uint32_t<sp/>tmr32_base){</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*<sp/>tmr32<sp/>=<sp/>(<ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*)tmr32_base;</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1ae43e19e8088a1fefc2dc18440543e33f" kindref="member">CMPX</ref>);</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8c_1a1fe62917e80107ffc55ac64d071f161f" kindref="member">CF_TMR32_setCMPY</ref><sp/>(uint32_t<sp/>tmr32_base,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value){</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*<sp/>tmr32<sp/>=<sp/>(<ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*)tmr32_base;</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1a595ddce5ae660e566f43e8c15585a138" kindref="member">CMPY</ref><sp/>=<sp/>value;</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8c_1a50616b48ff6f7a191c163badcfbddf54" kindref="member">CF_TMR32_getCMPY</ref><sp/>(uint32_t<sp/>tmr32_base){</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*<sp/>tmr32<sp/>=<sp/>(<ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*)tmr32_base;</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1a595ddce5ae660e566f43e8c15585a138" kindref="member">CMPY</ref>);</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8c_1a692bbc4af5c80220a3935ec4b1268676" kindref="member">CF_TMR32_getTMR</ref><sp/>(uint32_t<sp/>tmr32_base){</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*<sp/>tmr32<sp/>=<sp/>(<ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*)tmr32_base;</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1a4bf7305297d5a1b4d41265a94d5bc872" kindref="member">TMR</ref>);</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8c_1a5e18c1c7fb1332277c7fea24cae7dd91" kindref="member">CF_TMR32_setDeadtime</ref><sp/>(uint32_t<sp/>tmr32_base,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value){</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*<sp/>tmr32<sp/>=<sp/>(<ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*)tmr32_base;</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1aaf7ab19ccb2ec1d0352cbadb0e75024b" kindref="member">PWMDT</ref><sp/>=<sp/>value;</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="CF__TMR32_8c_1af6bca3ca58e7c717aad4777f1b0ddd7b" kindref="member">CF_TMR32_getDeadtime</ref><sp/>(uint32_t<sp/>tmr32_base){</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*<sp/>tmr32<sp/>=<sp/>(<ref refid="struct__CF__TMR32__TYPE__" kindref="compound">CF_TMR32_TYPE</ref>*)tmr32_base;</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(tmr32-&gt;<ref refid="struct__CF__TMR32__TYPE___1aaf7ab19ccb2ec1d0352cbadb0e75024b" kindref="member">PWMDT</ref>);</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"></highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="CF_TMR32.c"/>
+  </compounddef>
+</doxygen>
